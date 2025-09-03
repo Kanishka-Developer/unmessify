@@ -40,7 +40,6 @@ jobs:
       run: python convert_csv_to_json.py
 
     - name: Translate menus to Tamil/Hindi (Gemini)
-      if: ${{ secrets.GEMINI_API_KEY != '' }}
       env:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       run: |
