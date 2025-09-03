@@ -32,16 +32,26 @@ OUT_DIRS = {
     "ta": os.path.join("json", "ta"),
     "hi": os.path.join("json", "hi"),
 }
-MODEL_NAME = os.environ.get("GEMINI_MODEL", "gemini-1.5-flash")
+MODEL_NAME = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
 
 MENU_FIELDS = ["Day", "Breakfast", "Lunch", "Snacks", "Dinner"]
+# Only these fields should be translated; 'Day' must remain exactly as-is
+TRANSLATABLE_FIELDS = ["Breakfast", "Lunch", "Snacks", "Dinner"]
 
 SYSTEM_PROMPT = (
-    "You are a careful localization assistant for canteen menus. Translate the given JSON values "
+    "You are a careful localization assistant for mess menus. Translate ONLY the provided JSON values "
     "from English to the target language. Preserve the JSON structure and keys exactly. "
-    "Translate food names idiomatically. Keep punctuation and separators (commas, slashes, hyphens). "
-    "Do not add comments or extra fields. Return ONLY valid JSON."
+    "Translate food names idiomatically and in the native script of the target language. "
+    "Keep punctuation and separators (commas, slashes, hyphens, numbers) unchanged. "
+    "Do not add comments or extra fields. Return ONLY valid JSON. "
+    "Do NOT translate or modify the 'Day' field."
 )
+
+# Hints per language to strongly discourage Latin transliteration
+SCRIPT_HINTS = {
+    "hi": "Use Devanagari script for Hindi (e.g., देवनागरी). Do NOT use Latin letters for words.",
+    "ta": "Use Tamil script for Tamil (e.g., தமிழ்). Do NOT use Latin letters for words.",
+}
 
 
 def ensure_dirs(langs: List[str]):
@@ -65,9 +75,9 @@ def save_json(path: str, data: Dict[str, Any]):
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 
-def build_translation_payload(record: Dict[str, Any]) -> Dict[str, Any]:
+def build_translation_payload(record: Dict[str, Any], fields_to_translate: List[str]) -> Dict[str, Any]:
     payload = {}
-    for key in MENU_FIELDS:
+    for key in fields_to_translate:
         val = record.get(key)
         if val is None:
             payload[key] = None
@@ -76,47 +86,107 @@ def build_translation_payload(record: Dict[str, Any]) -> Dict[str, Any]:
     return payload
 
 
-def translate_fields(model: genai.GenerativeModel, payload: Dict[str, Any], target_lang: str) -> Dict[str, Any]:
-    # Use JSON response to reduce parsing issues
-    prompt = {
-        "instruction": SYSTEM_PROMPT,
-        "target_lang": target_lang,
-        "fields": payload,
+def _has_target_script(text: str, lang: str) -> bool:
+    if not isinstance(text, str) or not text:
+        return False
+    # Unicode ranges
+    ranges = {
+        "hi": [(0x0900, 0x097F)],  # Devanagari
+        "ta": [(0x0B80, 0x0BFF)],  # Tamil
     }
-    # generation_config response JSON
-    response = model.generate_content(
-        [
-            "Translate the JSON values in 'fields' to the language code in 'target_lang'.\n"
-            "Return ONLY the translated 'fields' object as strict JSON with the same keys.",
-            f"target_lang: {target_lang}",
-            "fields:",
-            json.dumps(payload, ensure_ascii=False),
-        ],
-        generation_config={
-            "response_mime_type": "application/json",
-        },
-    )
+    latin = 0
+    target = 0
+    total_letters = 0
+    for ch in text:
+        code = ord(ch)
+        if (65 <= code <= 90) or (97 <= code <= 122):
+            latin += 1
+            total_letters += 1
+        # count letters in target ranges
+        for lo, hi in ranges.get(lang, []):
+            if lo <= code <= hi:
+                target += 1
+                total_letters += 1
+                break
+    # Heuristic: require some target script and avoid high latin proportion
+    if target >= 10:
+        return True
+    if target >= 5 and (latin == 0 or target / max(1, (latin + target)) >= 0.6):
+        return True
+    return False
 
-    text = response.text or ""
-    # Gemini often returns just the JSON string when mime is set
-    try:
-        translated = json.loads(text)
-        # If the model wraps in an object, try to access 'fields'
-        if isinstance(translated, dict) and all(k in translated for k in MENU_FIELDS):
-            return translated
-        if isinstance(translated, dict) and "fields" in translated and isinstance(translated["fields"], dict):
-            return translated["fields"]
-        # As last resort, return payload unchanged
-        return payload
-    except json.JSONDecodeError:
-        # Fallback: return original payload to avoid breaking structure
-        return payload
+
+def translate_fields(
+    model: genai.GenerativeModel,
+    payload: Dict[str, Any],
+    target_lang: str,
+    keys: List[str],
+) -> Dict[str, Any]:
+    # Common content to send
+    base_content = [
+        SYSTEM_PROMPT,
+        f"Target language code: {target_lang}",
+        SCRIPT_HINTS.get(target_lang, ""),
+        "Translate the JSON values in 'fields' to the target language using its native script.\n"
+        "Return ONLY the translated 'fields' object as strict JSON with exactly the same keys.",
+        "fields:",
+        json.dumps(payload, ensure_ascii=False),
+    ]
+
+    def _invoke(stronger: bool = False) -> Dict[str, Any]:
+        content = list(base_content)
+        if stronger:
+            content.insert(
+                0,
+                "STRICT: Use only the native script (no Latin letters) for words. Keep numbers and punctuation as-is.",
+            )
+        response = model.generate_content(
+            content,
+            generation_config={
+                "response_mime_type": "application/json",
+                "temperature": 0.2,
+            },
+        )
+        text = (response.text or "").strip()
+        try:
+            translated = json.loads(text)
+            # If the model wraps in an object, try to access 'fields'
+            if isinstance(translated, dict) and all(k in translated for k in keys):
+                return {k: translated[k] for k in keys}
+            if isinstance(translated, dict) and "fields" in translated and isinstance(translated["fields"], dict):
+                inner = translated["fields"]
+                if all(k in inner for k in keys):
+                    return {k: inner[k] for k in keys}
+            return {}
+        except json.JSONDecodeError:
+            return {}
+
+    # First attempt
+    out = _invoke(stronger=False)
+    if not out:
+        out = payload.copy()
+    # Validate for transliteration issues; retry once if needed
+    needs_retry = any(
+        isinstance(v, str) and len(v) > 0 and not _has_target_script(v, target_lang)
+        for v in out.values()
+        if v is not None
+    )
+    if needs_retry:
+        retry = _invoke(stronger=True)
+        if retry:
+            out = retry
+    # Ensure missing keys are filled from payload
+    for k in keys:
+        if k not in out or out[k] is None:
+            out[k] = payload.get(k)
+    return out
 
 
 def translate_record(model: genai.GenerativeModel, record: Dict[str, Any], lang: str) -> Dict[str, Any]:
     out = dict(record)
-    payload = build_translation_payload(record)
-    translated = translate_fields(model, payload, lang)
+    # Build payload only for translatable fields; keep Day unchanged
+    payload = build_translation_payload(record, TRANSLATABLE_FIELDS)
+    translated = translate_fields(model, payload, lang, TRANSLATABLE_FIELDS)
     for k, v in translated.items():
         out[k] = v
     return out

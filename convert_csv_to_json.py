@@ -6,9 +6,12 @@ Script to convert CSV files to NocoDB API JSON format
 import csv
 import json
 import os
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 import hashlib
 import uuid
+
+# Add IST timezone (UTC+5:30)
+IST = timezone(timedelta(hours=5, minutes=30))
 
 def generate_record_id():
     """Generate a unique record ID in NocoDB format"""
@@ -16,7 +19,8 @@ def generate_record_id():
 
 def generate_record_hash():
     """Generate a record hash"""
-    return hashlib.md5(f"{datetime.now().isoformat()}{uuid.uuid4()}".encode()).hexdigest()
+    # use IST for consistency
+    return hashlib.md5(f"{datetime.now(IST).isoformat()}{uuid.uuid4()}".encode()).hexdigest()
 
 def convert_csv_to_nocodb_json(csv_file_path, table_name):
     """Convert a CSV file to NocoDB API JSON format"""
@@ -33,13 +37,14 @@ def convert_csv_to_nocodb_json(csv_file_path, table_name):
                 cleaned_row[key] = value if value.strip() else None
             
             # Create record in NocoDB format
+            now_ist = datetime.now(IST).isoformat(timespec='seconds').replace('T', ' ')
             record = {
                 "Id": index,
                 "ncRecordId": generate_record_id(),
                 "ncRecordHash": generate_record_hash(),
                 **cleaned_row,
-                "CreatedAt": "2025-07-01 00:00:00+00:00",
-                "UpdatedAt": "2025-07-01 12:34:56+00:00"
+                "CreatedAt": now_ist,
+                "UpdatedAt": now_ist
             }
             
             records.append(record)
