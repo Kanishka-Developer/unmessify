@@ -1,0 +1,98 @@
+{
+  "list": [
+    {
+      "Id": 1,
+      "ncRecordId": "recf0cf472af0864",
+      "ncRecordHash": "a4cd8b45341291d3559214ab13891d26",
+      "Day": "Monday",
+      "Breakfast": "Idli, Sambhar, aloo parotta,curd,pickle,tomato chutney, butter,jam,tea, coffee,\n",
+      "Lunch": "Karakolambu, Achari Paneer do Pyaza, Dal fry, phulka, Rasam, White Rice, Carrot Beans poriyal, Appalam, Cucumber, Curd, Pickle, sugar, salt\n",
+      "Snacks": "Noodles with Ketchup, TMC\n",
+      "Dinner": "Masala dosa, white chutney, sambhar, Aloo Peas Gobi gravy, Phulka, White rice, Rasam, Pineapple, Milk and coffee\n",
+      "CreatedAt": "2025-09-03 17:02:18+05:30",
+      "UpdatedAt": "2025-09-03 17:02:18+05:30"
+    },
+    {
+      "Id": 2,
+      "ncRecordId": "rec5d223724e50d4",
+      "ncRecordHash": "d3602cc42f88cdda6073768a8c326f01",
+      "Day": "Tuesday",
+      "Breakfast": "Semya Upma, Poori, White channa masala gravy, pineapple kesari , paruppu vada, sprouts, TMC , BBJ\n",
+      "Lunch": "Bisbillabath, Ladies Finger poriyal, White Rice, Rasam, Pickle , phulka, potato chips, moong daal, rice payasam, lemon juice, salt\n",
+      "Snacks": "Sweet corn, tomato,onion,TMC\n",
+      "Dinner": "Fried Podi idli, Coconut Chutney,Kofta gravy, Chappathi, sambar , Chocolate milk,White rice, Rasam, Pickle\n",
+      "CreatedAt": "2025-09-03 17:02:18+05:30",
+      "UpdatedAt": "2025-09-03 17:02:18+05:30"
+    },
+    {
+      "Id": 3,
+      "ncRecordId": "recc9a1544c653c4",
+      "ncRecordHash": "df9cbd8ec6c9948cc7b30377480a9827",
+      "Day": "Wednesday",
+      "Breakfast": " Thin crispy dosa, Vada curry,poha,lemon ,TMC , BBJ\n",
+      "Lunch": "Rajma, Jeera rice, phulka, coconut rice, masala potato fry, white rice, rasam, pickle, tadka buttermilk, fryums, salt\n",
+      "Snacks": "vada pav with green chilli/sundal , TMC\n",
+      "Dinner": "chola poori, lemon, onion, white channa gravy, vegetable rava idli, groundnut chutney, watermelon\n",
+      "CreatedAt": "2025-09-03 17:02:18+05:30",
+      "UpdatedAt": "2025-09-03 17:02:18+05:30"
+    },
+    {
+      "Id": 4,
+      "ncRecordId": "recafb7a57601eb4",
+      "ncRecordHash": "3a5d2f1cf194556c620dc5d320520b90",
+      "Day": "Thursday",
+      "Breakfast": "Paneer Paratha, Curd, Pickle, Pongal, Medhu Vada, sambhar, white chutney,TMC , BBJ\n",
+      "Lunch": "Raw Mango Sambhar, Aviyal, Vegetable Pulao, Boondhi Raita, White Rice, Chappathi, Soya Bean gravy, Rasam, Pickle, Bat chips, semiya payasam, Sugar, salt\n",
+      "Snacks": "Veg puff ,sause TMC\n",
+      "Dinner": "Thin dosa, onion tomato thokku, rajma gravy , chapati , jalebi , milk and coffee\n\n",
+      "CreatedAt": "2025-09-03 17:02:18+05:30",
+      "UpdatedAt": "2025-09-03 17:02:18+05:30"
+    },
+    {
+      "Id": 5,
+      "ncRecordId": "rec8f3f9c50d0e64",
+      "ncRecordHash": "937c9121592c94401dc812449df3f093",
+      "Day": "Friday",
+      "Breakfast": "Rava upma, white chutney, sprouts,ragi puttu, cherupayiru , shredded coconut , sambhar TMC , BBJ\n",
+      "Lunch": "yam poriyal,white rice, rasam, pickle, methi matar malai gravy, morekolumbu with vada , phulka,  curd\n",
+      "Snacks": "Mysore bonda, white chutney,TMC,   \n",
+      "Dinner": "stuffed kulcha , palak panner ,white rice , rasam , moong dal, phulka, onion, lemon, banana\n",
+      "CreatedAt": "2025-09-03 17:02:18+05:30",
+      "UpdatedAt": "2025-09-03 17:02:18+05:30"
+    },
+    {
+      "Id": 6,
+      "ncRecordId": "rec7d5e8953a7304",
+      "ncRecordHash": "85f814c6f9584338af7f912e7f115f2c",
+      "Day": "Saturday",
+      "Breakfast": " Paav Bhaji, Kichadi, white chutney, vada , TMC , BBJ \n",
+      "Lunch": "white rice, rasam,raddish sambhar,ghee rice with caramalised onion, phulka, beetroot poriyal, dal, aloo palak gravy, appalam, buttermilk\n",
+      "Snacks": "potato samosa, green chutney , sweet chutney , sause TMC\n",
+      "Dinner": "schezwan fried rice , gobi manchurian , black canna gravy ,  phulka , white rice , rasam , badam milk . \n\n",
+      "CreatedAt": "2025-09-03 17:02:18+05:30",
+      "UpdatedAt": "2025-09-03 17:02:18+05:30"
+    },
+    {
+      "Id": 7,
+      "ncRecordId": "rec65cd74fe367f4",
+      "ncRecordHash": "d8d50d769c390a3c398750b774a4e035",
+      "Day": "Sunday",
+      "Breakfast": "Idiyappam, Coconut milk,kadala curry, gobi paratha,curd,pickle ,BBJ,TMC \n",
+      "Lunch": "white rice, channa dal,, ghee , veg soya briyani , onion cucumber raita , gobi 65 , curdrice ,chapati, navratan kurma, chilled mint lemon juice ,fryums.\n",
+      "Snacks": "pani puri/dahi puri TMC\n",
+      "Dinner": "thin podi dosa , white chutney , sambar , dal makhani , phulka , mix veg gravy ,white rice ,rasam , and ice-cream available that week gulab jamun.  \n",
+      "CreatedAt": "2025-09-03 17:02:18+05:30",
+      "UpdatedAt": "2025-09-03 17:02:18+05:30"
+    }
+  ],
+  "pageInfo": {
+    "totalRows": 7,
+    "page": 1,
+    "pageSize": 50,
+    "isFirstPage": true,
+    "isLastPage": true
+  },
+  "stats": {
+    "dbQueryTime": "1.234"
+  }
+}
