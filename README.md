@@ -1,5 +1,6 @@
-# Unmessify Data
-Data for Unmessify
+# Unmessify
+
+Open JSON data and reference for the Unmessify platform
 
 ## Overview
 

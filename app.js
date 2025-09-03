@@ -456,7 +456,7 @@ function showAbout() {
             <h3 style="margin-bottom: 1rem; color: var(--primary-color);">🔗 Source</h3>
             <p>
                 Data is automatically generated from CSV files and updated via GitHub Actions. 
-                <a href="https://github.com/Kanishka-Developer/unmessify-data" target="_blank" 
+                <a href="https://github.com/Kanishka-Developer/unmessify" target="_blank" 
                    style="color: var(--primary-color); text-decoration: none;">
                     View the repository →
                 </a>
