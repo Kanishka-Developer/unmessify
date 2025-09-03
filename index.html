@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unmessify</title>
+    <meta name="description" content="VITC Hostel Data - Room Assignments and Menu Information">
+    <meta name="theme-color" content="#004C69">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/png" href="assets/foreground.png">
+    <link rel="apple-touch-icon" href="assets/foreground.png">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>📊 Unmessify</h1>
+                    <p>VITC Hostel Information</p>
+                </div>
+                <div class="header-actions">
+                    <a href="editor.html" class="btn btn-primary">
+                        ✏️ Edit Data
+                    </a>
+                    <button class="btn btn-primary" id="installBtn">
+                        📱 Install App
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Search and Filter Section -->
+            <section class="controls">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="🔍 Search tables, rooms, or menu items...">
+                </div>
+                <div class="filter-tabs">
+                    <button class="tab-btn active" data-filter="all">All Data</button>
+                    <button class="tab-btn" data-filter="rooms">Laundry</button>
+                    <button class="tab-btn" data-filter="menus">Menus</button>
+                </div>
+            </section>
+
+            <!-- Loading State -->
+            <div class="loading" id="loading">
+                <div class="loader"></div>
+                <p>Loading data...</p>
+            </div>
+
+            <!-- Data Grid -->
+            <section class="data-grid" id="dataGrid">
+                <!-- Data will be populated by JavaScript -->
+            </section>
+
+            <!-- No Results -->
+            <div class="no-results" id="noResults" style="display: none;">
+                <div class="no-results-content">
+                    <h3>🔍 No Results Found</h3>
+                    <p>Try adjusting your search or filter criteria</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal for Data Details -->
+    <div class="modal" id="dataModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Data Details</h2>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Kaffeine Software. Open source data for VITC.</p>
+                <div class="footer-links">
+                    <a href="https://github.com/Kanishka-Developer/unmessify-data" target="_blank">
+                        🔗 GitHub Repository
+                    </a>
+                    <a href="#" id="aboutBtn">ℹ️ About</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+</html>

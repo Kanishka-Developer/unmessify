@@ -1,0 +1,67 @@
+{
+  "name": "Unmessify",
+  "short_name": "Unmessify",
+  "description": "VITC Hostel Data - Mess Menus and Laundry Schedules",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#004C69",
+  "orientation": "portrait-primary",
+  "scope": "./",
+  "lang": "en",
+  "categories": ["education", "utilities", "lifestyle"],
+  "icons": [
+    {
+      "src": "assets/foreground.png",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/monochrome.png",
+      "type": "image/png",
+      "purpose": "monochrome"
+    },
+    {
+      "src": "assets/background.png",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Edit Data",
+      "short_name": "Editor",
+      "description": "Edit hostel data and menus",
+  "url": "/editor.html",
+  "icons": [{ "src": "assets/foreground.png" }]
+    },
+    {
+      "name": "Laundry",
+      "short_name": "Laundry",
+      "description": "View hostel laundry schedules",
+  "url": "/?filter=rooms",
+  "icons": [{ "src": "assets/foreground.png" }]
+    },
+    {
+      "name": "Mess Menus",
+      "short_name": "Menus",
+      "description": "View mess menu schedules",
+  "url": "/?filter=menus",
+  "icons": [{ "src": "assets/foreground.png" }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/screenshot-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "assets/screenshot-desktop.png",
+      "sizes": "1200x800",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unmessify Editor</title>
+    <meta name="description" content="VITC Hostel Data Editor - Update Menus and Laundry Schedules">
+    <meta name="theme-color" content="#004C69">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/png" href="assets/foreground.png">
+    <link rel="apple-touch-icon" href="assets/foreground.png">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="editor-styles.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>✏️ Unmessify Editor</h1>
+                    <p>Update VITC Hostel Information</p>
+                </div>
+                <div class="header-actions">
+                    <a href="index.html" class="btn btn-secondary">
+                        👁️ View Data
+                    </a>
+                    <button class="btn btn-primary" id="downloadBtn" style="display: none;">
+                        💾 Download CSV
+                    </button>
+                    <button class="btn btn-success" id="submitBtn" style="display: none;">
+                        🚀 Create PR
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- File Selection Section -->
+            <section class="file-selection">
+                <div class="selection-header">
+                    <h2>📁 Select File to Edit</h2>
+                    <p>Choose a CSV file to update the data</p>
+                </div>
+                
+                <div class="file-categories">
+                    <!-- Laundry Files -->
+                    <div class="category-section">
+                        <h3>🧺 Laundry Schedules</h3>
+                        <div class="file-grid" id="laundryFiles">
+                            <!-- Will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <!-- Menu Files -->
+                    <div class="category-section">
+                        <h3>🍽️ Mess Menus</h3>
+                        <div class="menu-subcategories">
+                            <div class="subcategory">
+                                <h4>👨 Men's Mess</h4>
+                                <div class="file-grid" id="menMenuFiles">
+                                    <!-- Will be populated by JavaScript -->
+                                </div>
+                            </div>
+                            <div class="subcategory">
+                                <h4>👩 Women's Mess</h4>
+                                <div class="file-grid" id="womenMenuFiles">
+                                    <!-- Will be populated by JavaScript -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Editor Section -->
+            <section class="editor-section" id="editorSection" style="display: none;">
+                <div class="editor-header">
+                    <div class="file-info">
+                        <h2 id="currentFileName">📄 File Name</h2>
+                        <p id="currentFileDesc">File description</p>
+                    </div>
+                    <div class="editor-actions">
+                        <button class="btn btn-secondary" id="cancelEditBtn">
+                            ❌ Cancel
+                        </button>
+                        <button class="btn btn-warning" id="resetBtn">
+                            🔄 Reset
+                        </button>
+                        <button class="btn btn-primary" id="previewBtn">
+                            👁️ Preview
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Data Table Editor -->
+                <div class="table-editor">
+                    <div class="table-container">
+                        <table class="edit-table" id="editTable">
+                            <!-- Will be populated by JavaScript -->
+                        </table>
+                    </div>
+                    
+                    <!-- Table Actions -->
+                    <div class="table-actions">
+                        <button class="btn btn-secondary" id="addRowBtn">
+                            ➕ Add Row
+                        </button>
+                        <button class="btn btn-warning" id="deleteRowBtn" style="display: none;">
+                            🗑️ Delete Selected Row
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Changes Summary -->
+                <div class="changes-summary" id="changesSummary" style="display: none;">
+                    <h3>📋 Changes Summary</h3>
+                    <div class="changes-list" id="changesList">
+                        <!-- Will be populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Preview Modal -->
+    <div class="modal" id="previewModal">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h2>👁️ Preview Changes</h2>
+                <button class="modal-close" id="previewModalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="preview-tabs">
+                    <button class="tab-btn active" data-tab="table">📊 Table View</button>
+                    <button class="tab-btn" data-tab="csv">📝 CSV Preview</button>
+                    <button class="tab-btn" data-tab="diff">🔍 Changes</button>
+                </div>
+                
+                <div class="preview-content">
+                    <div class="preview-tab active" id="previewTable">
+                        <!-- Table preview will be populated here -->
+                    </div>
+                    <div class="preview-tab" id="previewCSV">
+                        <pre><code id="csvPreviewCode"></code></pre>
+                    </div>
+                    <div class="preview-tab" id="previewDiff">
+                        <div id="diffContent">
+                            <!-- Diff will be shown here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="previewCancelBtn">Cancel</button>
+                <button class="btn btn-primary" id="saveChangesBtn">💾 Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PR Modal -->
+    <div class="modal" id="prModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>🚀 Create Pull Request</h2>
+                <button class="modal-close" id="prModalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="prTitle">Pull Request Title</label>
+                    <input type="text" id="prTitle" placeholder="Update [filename] data">
+                </div>
+                
+                <div class="form-group">
+                    <label for="prDescription">Description</label>
+                    <textarea id="prDescription" rows="5" placeholder="Describe your changes...
+
+Changes made:
+- 
+
+These changes are important because:
+- "></textarea>
+                </div>
+                
+                <div class="pr-instructions">
+                    <h4>📋 Next Steps:</h4>
+                    <ol>
+                        <li>Download the updated CSV file</li>
+                        <li>Fork the repository on GitHub</li>
+                        <li>Replace the old CSV file with your updated version</li>
+                        <li>Create a pull request with the information above</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="prCancelBtn">Cancel</button>
+                <button class="btn btn-primary" id="copyPRInfoBtn">📋 Copy PR Info</button>
+                <button class="btn btn-success" id="downloadUpdatedBtn">💾 Download CSV</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay" style="display: none;">
+        <div class="loading-content">
+            <div class="loader"></div>
+            <p id="loadingText">Loading...</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Kaffeine Software. Open source data management for VITC.</p>
+                <div class="footer-links">
+                    <a href="https://github.com/Kanishka-Developer/unmessify-data" target="_blank">
+                        🔗 GitHub Repository
+                    </a>
+                    <a href="index.html">📊 View Data</a>
+                    <a href="#" id="editorHelpBtn">❓ Help</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="editor.js"></script>
+</body>
+</html>
