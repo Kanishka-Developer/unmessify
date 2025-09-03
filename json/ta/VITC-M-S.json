@@ -1,0 +1,98 @@
+{
+  "list": [
+    {
+      "Id": 1,
+      "ncRecordId": "recff27cbd805bf4",
+      "ncRecordHash": "7c08b6fccd0c75be9aeb9c64250cd72b",
+      "Day": "Lundi",
+      "Breakfast": "1. Idly + Vada + Sambar + Chutney à la menthe + Podi + Huile\n2. Poha + Bhujia + Oignon haché et citron\n3. Egg Bhurji\n4. Cornflakes + Lait froid + Jus de papaye (semaines 1 et 3) / Jus de banane (semaines 2 et 4)\n5. Pain + Beurre + Confiture\n6. Thé + Café + Lait",
+      "Lunch": "1. Masala Kulcha + Kozhi Varutha Kari (semaines 1 et 3) / Poulet Dragon (semaines 2 et 4) + Sauce Kadai Paneer\n2. Riz frit aux légumes + Gobi Capsicum sec\n3. Riz blanc + Sambar aux légumes + Cabbage Poriyal + Yaourt + Papad\n4. Parupu podi + Ghee + Thovaiyal\n5. Banane\n6. Jus de citron",
+      "Snacks": "Burger + Sauce (semaines 1 et 3) /\nSamosa aux légumes + Chutney vert (semaines 2 et 4)\nThé / Café / Lait",
+      "Dinner": "1. Phulka + Rajma Masala\n2. Riz blanc + Gobi 65 sec + Dal + Rasam + Yaourt\n3. Soupe à la crème de maïs\n4. Lait + Salade (tomate + carotte + citron + piment vert)\n5. Crème glacée",
+      "CreatedAt": "2025-07-01 00:00:00+00:00",
+      "UpdatedAt": "2025-07-01 12:34:56+00:00"
+    },
+    {
+      "Id": 2,
+      "ncRecordId": "rec197770083d934",
+      "ncRecordHash": "885bcb88479399bc4a21ba9a4d8f2f35",
+      "Day": "Martes",
+      "Breakfast": "1. Paratha simple + Salsa de tomate y cebolla + Cuajada\n2. Dosai mixto vegetariano + Sambar + Chutney de coco\n3. Huevo cocido + Revuelto de queso fresco\n4. Chocos + Leche fría + Zumo de Mosambi\n5. Pan tostado (Semanas 1 y 3) / Pan integral (Semanas 2 y 4) + Mantequilla + Mermelada\n6. Té + Café + Leche",
+      "Lunch": "1. Phulka + Dal de comino + Aloo Gobi seco\n2. Biryani vegetariano (Semanas 1 y 3) / Biryani vegetariano (soya) (Semanas 2 y 4)\n3. Arroz blanco + Sambar de rábano + Keerai Poriyal + Cuajada + Encurtido + Frituras\n4. Parupu Podi + Ghee + Thovaiyal\n5. Payasam de leche\n6. Papaya",
+      "Snacks": "Pasta (blanca/roja) (Semanas 1 y 3) /\nKachori + Chutney dulce (Semanas 2 y 4)\nTé / Café / Leche",
+      "Dinner": "1. Phulka + Paneer Tikka Masala\n2. Arroz blanco + Dal + Berenjena seca + Rasam + Suero de leche\n3. Idly + Podi + Aceite + Chutney + Sambar\n4. Sopa de tomate + Halwa de zanahoria (Semana 1 y 3) / Jelabi (Semana 2 y 4)\n5. Ensalada (pepino + zanahoria + limón) + Batido de chocolate",
+      "CreatedAt": "2025-07-01 00:00:00+00:00",
+      "UpdatedAt": "2025-07-01 12:34:56+00:00"
+    },
+    {
+      "Id": 3,
+      "ncRecordId": "rec9df489775cfc4",
+      "ncRecordHash": "55e10e2163df1b44a646e3b23da7f647",
+      "Day": "Mittwoch",
+      "Breakfast": "1. Puri + Channa Masala\n2. Hirse-Idli + Vada + Sambar + Erdnussmus + Podi + Öl\n3. Ei (Salz & Pfeffer)\n4. Haferflocken (Wochen 1 & 3) / Cornflakes (Wochen 2 & 4) + kalte Milch + Wassermelonen Saft\n5. Brot + Butter + Marmelade\n6. Tee + Kaffee + Milch",
+      "Lunch": "1. Phulka + Tandoor-Hühnchen + Hühnchen-Soße ohne Stücke (Wochen 1 & 3) / Hühnchen Chettinad Masala (Wochen 2 & 4) + Dal\n2. Kaschmirisches Frucht-Pulao + Paneer-Butter-Masala (Wochen 1 & 3) / Kadai-Paneer-Masala (Wochen 2 & 4)\n3. Weißer Reis + Drumstick-Sambar + Chettinad-Bohnen & Blumenkohl (Wochen 1 & 3) / Vazhakai-Bratkartoffeln (Wochen 2 & 4) + Joghurt + Eingelegtes + Fryums/Papad\n4. Parupu Podi + Öl + Thovaiyal\n5. Obstsalat (Ananas + Traube + Apfel + Granatapfel)\n6. Zitronen-Minz-Saft",
+      "Snacks": "Bananen-Bajji + Kokosnuss-Chutney (Wochen 1 & 3) /\nGekochte Kichererbsen (Wochen 2 & 4)\nTee / Kaffee / Milch",
+      "Dinner": "1. Phulka + Mughlai-Eier-Curry + Süßmais-Masala\n2. Weißer Reis + Sambar + Rasam + Joghurt + Pommes frites\n3. Süßmais-Gemüsesuppe\n4. Mysore Pak (Wochen 1 & 3) / Bombay Halwa (Wochen 2 & 4) + Salat (Rote Bete + Karotte + Gurke) + kalte Mandelmilch",
+      "CreatedAt": "2025-07-01 00:00:00+00:00",
+      "UpdatedAt": "2025-07-01 12:34:56+00:00"
+    },
+    {
+      "Id": 4,
+      "ncRecordId": "rec5517cd37b9b14",
+      "ncRecordHash": "9db9b493f252e1d4f8914eab1d6a4619",
+      "Day": "Jueves",
+      "Breakfast": "1. Uthappam de cebolla + Chutney de cacahuete + Sambar + Podi + Aceite\n2. Kichadi\n3. Tortilla de huevo (Semanas 1 y 3) / Huevo (con sal y pimienta) (Semanas 2 y 4)\n4. Chocos + Leche fría + Zumo de manzana\n5. Pan integral + Mantequilla + Mermelada\n6. Té + Café + Leche",
+      "Lunch": "1. Chappathi + Malai Kofta (Semanas 1 y 3) / Gobi frito seco (Semanas 2 y 4) + Dal Fry\n2. Pulav de verduras + Bhindi frito (Semanas 1 y 3) / Aloo Pepper seco (Semanas 2 y 4)\n3. Arroz blanco + Morekuzhambu + Mochai Poriyal (Semanas 1 y 3) / Venadakai Poriyal (Semanas 2 y 4) + Rasam\n4. Parupu Podi + Ghee + Thovaiyal + Papad\n5. Piña\n6. Suero de mantequilla",
+      "Snacks": "Pastel + Salsa (Semanas 1 y 3) /\nAloo Bonda + Chutney (Semanas 2 y 4)\nTé / Café / Leche",
+      "Dinner": "1. Poori + Chole Masala (Semanas 1 y 3) / Patata Masala (tipo sur) (Semanas 2 y 4)\n2. Arroz frito con huevo + Arroz frito con verduras + Salsa\n3. Arroz blanco + Dal + Rasam + Repollo Poriyal (Semanas 1 y 3) / Repollo Paruppu Kootu (Semanas 2 y 4)\n4. Sopa de verduras agridulce\n5. Ensalada (pepino + zanahoria) + Leche de rosas (Semanas 1 y 3) / Batido de plátano (Semanas 2 y 4)",
+      "CreatedAt": "2025-07-01 00:00:00+00:00",
+      "UpdatedAt": "2025-07-01 12:34:56+00:00"
+    },
+    {
+      "Id": 5,
+      "ncRecordId": "rec2535de96ef644",
+      "ncRecordHash": "8d1a69b8229b8443999ba932c437321c",
+      "Day": "Viernes",
+      "Breakfast": "1. Pav Bhaji + Cebolla Picada\n2. Pongal de mijo + Vada + Sambar + Chutney de coco\n3. Huevo cocido\n4. Cornflakes + Leche fría + Jugo de piña\n5. Pan + Mantequilla + Mermelada\n6. Té + Café + Leche",
+      "Lunch": "1. Phulka + Pescado frito con especias (Semanas 1 y 3) / Dal Makhani (Semanas 2 y 4)\n2. Biriyani vegetariano + Paneer Tikka Masala + Pollo Handi Masala (Semanas 2 y 4)\n3. Arroz blanco + Sambar + Rasam + Cuajada + Patata Pattani Masiyal (Semanas 1 y 3) / Papad (Semanas 2 y 4) + Veg Poriyal (Semanas 1 y 3) / Karamani Poriyal (Semanas 2 y 4)\n4. Parupu Podi + Ghee + Thovaiyal\n5. Sandía\n6. Jugo de limón",
+      "Snacks": "Papdi Chat (Semanas 1 y 3) /\nMaíz dulce (Semanas 2 y 4)\nTé / Café / Leche",
+      "Dinner": "1. Chappati (Semanas 1 y 3) / Chappati de Methi Ajwain (Semanas 2 y 4) + Kashmiri Aloo Dum (Semanas 1 y 3) / Papa con chile (Semanas 2 y 4) + Curry de huevo\n2. Arroz blanco + Dhal + Rasam\n3. Sopa de maíz dulce (Semanas 1 y 3) / Sopa de tomate (Semanas 2 y 4) + Ensalada (cebolla + tomate + limón)\n4. Batido de vainilla",
+      "CreatedAt": "2025-07-01 00:00:00+00:00",
+      "UpdatedAt": "2025-07-01 12:34:56+00:00"
+    },
+    {
+      "Id": 6,
+      "ncRecordId": "reca74a344dc9d14",
+      "ncRecordHash": "d7a690f581ea03d2bc2096f3b9c21941",
+      "Day": "Sábado",
+      "Breakfast": "1. Dosa sin relleno (Semanas 1 y 3) / Dosa con cebolla (Semanas 2 y 4) + Curry de Vada + Chutney de tomate y menta + Sambar + Podi + Aceite\n2. Poha de vegetales\n3. Tortilla\n4. Chocos + Leche fría + Jugo de uva\n5. Pan + Mantequilla + Mermelada\n6. Té + Café + Leche",
+      "Lunch": "1. Chapati + Masala de soya + Dal\n2. Arroz con limón (Semanas 1 y 3) / Arroz con coco (Semanas 2 y 4) + Gobi Manchurian\n3. Arroz blanco + Sambar de verduras mixtas + Rasam + Cuajada + Encurtido\n4. Parupu podi + Ghee + Thovaiyal\n5. Piña\n6. Lassi dulce",
+      "Snacks": "Sándwich de pan + Salsa (Semanas 1 y 3) /\nPakoda de cebolla (Semanas 2 y 4)\nTé / Café / Leche",
+      "Dinner": "1. Chapati + Masala de guisantes y patatas (Semanas 1 y 3) / Masala de verduras mixtas (Semanas 2 y 4)\n2. Dosa masala + Sambar + Chutney\n3. Arroz blanco + Dal + Poriyal de zanahoria + Rasam\n4. Crema de pollo + Crema de verduras\n5. Badhusha (Semanas 1 y 3) / Crema de pan (Semanas 2 y 4) + Ensalada (Tomate + Pepino + Limón) + Leche",
+      "CreatedAt": "2025-07-01 00:00:00+00:00",
+      "UpdatedAt": "2025-07-01 12:34:56+00:00"
+    },
+    {
+      "Id": 7,
+      "ncRecordId": "recfc3b57daf6124",
+      "ncRecordHash": "f54446af10299cc8384f3258ce75cb70",
+      "Day": "Dimanche",
+      "Breakfast": "1. Kichadi végétarien + Chutney + Yaourt\n2. Dosa Pesarattu + Chutney de noix de coco\n3. Curry aux œufs épicés\n4. Chocos + Lait froid + Jus d'orange\n5. Pain + Beurre + Confiture\n6. Thé + Café + Lait",
+      "Lunch": "1. Phulka + Sauce Kadai Paneer\n2. Biryani Hyderabadi végétarien + Baby Corn Chilly Masala\n3. Seeraga Samba Dindugal Biryani (Authentique les semaines 1 et 3) + Raitha d'oignon + Curry d'aubergine + Riz au yaourt + Pickles\n4. Riz blanc + Rasam + Cabbage Poriyal\n5. Dal Payasam (semaines 1 et 3) / Semiya Milk Payasam (semaines 2 et 4) + Banane",
+      "Snacks": "Pani Poori (semaines 1 et 3) /\nSambar Vada (semaines 2 et 4)\nThé / Café / Lait",
+      "Dinner": "1. Atta Poori + Channa Masala blanc\n2. Bisibilabath + Potato Varuval\n3. Riz blanc + Karakozhambu + Rasam + Yaourt + PoriaI + Pickles\n4. Salade (Oignon + Carotte les semaines 1 et 3)\n5. Gulab Jamun + Jus de citron",
+      "CreatedAt": "2025-07-01 00:00:00+00:00",
+      "UpdatedAt": "2025-07-01 12:34:56+00:00"
+    }
+  ],
+  "pageInfo": {
+    "totalRows": 7,
+    "page": 1,
+    "pageSize": 50,
+    "isFirstPage": true,
+    "isLastPage": true
+  },
+  "stats": {
+    "dbQueryTime": "1.234"
+  }
+}
