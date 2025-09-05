@@ -75,9 +75,11 @@ The generated JSON files follow the NocoDB API format with the following structu
 When CSV files in the `csv/` directory are modified:
 
 1. GitHub Actions automatically triggers the conversion workflow
-2. The `convert_csv_to_json.py` script processes all CSV files
-3. Updated JSON files are generated in the `json/` directory
-4. Changes are automatically committed back to the repository
+2. The `convert_csv_to_json.py` script processes all CSV files to refresh `json/en/`
+3. The workflow detects which CSVs changed and maps them to target `json/en/*.json`
+4. Only the corresponding menu JSONs are translated to `json/ta/` and `json/hi/`
+5. Laundry JSONs matching the changed CSVs are copied 1:1 into `json/ta/` and `json/hi/` for parity
+6. Changes are automatically committed back to the repository
 
 ## Manual Conversion (English -> json/en)
 
@@ -122,7 +124,20 @@ python .\translate_menus.py --langs ta hi
 ```
 Outputs will be saved under `json/ta/` and `json/hi/` with the same filenames.
 
-Note: The translator only processes menu files (VITC-M-*.json and VITC-W-*.json). Laundry files are skipped.
+Notes:
+- The translator only processes menu files (VITC-M-*.json and VITC-W-*.json). Laundry files are not translated.
+- Laundry JSONs are copied 1:1 into `json/ta/` and `json/hi/` for parity via CI.
+
+Selective processing (useful for CI or local testing):
+```powershell
+# Translate only specific changed menu JSONs (paths relative to repo root)
+python .\translate_menus.py --from-file changed_jsons.txt --langs ta hi
+
+# Copy only laundry JSONs for parity (no API key needed)
+python .\translate_menus.py --parity-only --from-file changed_jsons.txt --langs ta hi
+```
+
+Where `changed_jsons.txt` contains newline-separated paths like `json/en/VITC-M-N.json`.
 
 ## Frontend Application
 

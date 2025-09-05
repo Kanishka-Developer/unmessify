@@ -31,12 +31,43 @@ jobs:
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; else pip install google-generativeai; fi
     
+    - name: Determine changed CSVs and target JSONs
+      id: changes
+      shell: bash
+      run: |
+        set -e
+        # Find changed CSV files
+        if [ "${{ github.event_name }}" = "push" ]; then
+          git diff --name-only ${{ github.event.before }} ${{ github.sha }} -- 'csv/**/*.csv' > changed_csvs.txt || true
+        else
+          git fetch origin ${{ github.base_ref }} --depth=1 || true
+          git fetch origin ${{ github.head_ref }} --depth=1 || true
+          git diff --name-only origin/${{ github.base_ref }}...origin/${{ github.head_ref }} -- 'csv/**/*.csv' > changed_csvs.txt || true
+        fi
+        # Map to json/en/*.json
+        : > changed_jsons.txt
+        if [ -s changed_csvs.txt ]; then
+          while IFS= read -r f; do
+            bn=$(basename "$f")
+            name="${bn%.csv}.json"
+            echo "json/en/$name" >> changed_jsons.txt
+          done < changed_csvs.txt
+        fi
+        count=$(grep -c . changed_jsons.txt || true)
+        echo "count=$count" >> $GITHUB_OUTPUT
+        echo "Changed JSON targets (json/en):"
+        cat changed_jsons.txt || true
+    
     - name: Convert CSV files to JSON
       run: python convert_csv_to_json.py
 
-    - name: Translate menus to Tamil/Hindi (Gemini)
-      if: env.GEMINI_API_KEY != ''
-      run: python translate_menus.py
+    - name: Translate changed menus to Tamil/Hindi (Gemini)
+      if: env.GEMINI_API_KEY != '' && steps.changes.outputs.count != '0'
+      run: python translate_menus.py --langs ta hi --from-file changed_jsons.txt
+
+    - name: Ensure laundry JSON parity (copy)
+      if: steps.changes.outputs.count != '0'
+      run: python translate_menus.py --parity-only --from-file changed_jsons.txt --langs ta hi
     
     - name: Check for changes
       id: verify-changed-files
