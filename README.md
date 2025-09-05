@@ -9,24 +9,24 @@ This repository contains CSV data files and their corresponding JSON representat
 ## Structure
 
 ```
-├── csv/                       # Source CSV files
-│   ├── VITC-A-L.csv          # Laundry: Date and RoomNumber data
-│   ├── VITC-B-L.csv          # Laundry: Date and RoomNumber data
-│   ├── VITC-CB-L.csv         # Laundry: Date and RoomNumber data
-│   ├── VITC-CG-L.csv         # Laundry: Date and RoomNumber data
-│   ├── VITC-D1-L.csv         # Laundry: Date and RoomNumber data
-│   ├── VITC-D2-L.csv         # Laundry: Date and RoomNumber data
-│   ├── VITC-M-N.csv          # Men's Non-Veg Menu (Day, Breakfast, Lunch, Snacks, Dinner)
-│   ├── VITC-M-S.csv          # Men's Special Menu (Day, Breakfast, Lunch, Snacks, Dinner)
-│   ├── VITC-M-V.csv          # Men's Veg Menu (Day, Breakfast, Lunch, Snacks, Dinner)
-│   ├── VITC-W-N.csv          # Women's Non-Veg Menu (Day, Breakfast, Lunch, Snacks, Dinner)
-│   ├── VITC-W-S.csv          # Women's Special Menu (Day, Breakfast, Lunch, Snacks, Dinner)
-│   └── VITC-W-V.csv          # Women's Veg Menu (Day, Breakfast, Lunch, Snacks, Dinner)
-├── json/                     # Generated JSON files (NocoDB API format)
+├── csv/                     # Source CSV files
+│   ├── VITC-A-L.csv         # Laundry: Date and RoomNumber data
+│   ├── VITC-B-L.csv         # Laundry: Date and RoomNumber data
+│   ├── VITC-CB-L.csv        # Laundry: Date and RoomNumber data
+│   ├── VITC-CG-L.csv        # Laundry: Date and RoomNumber data
+│   ├── VITC-D1-L.csv        # Laundry: Date and RoomNumber data
+│   ├── VITC-D2-L.csv        # Laundry: Date and RoomNumber data
+│   ├── VITC-M-N.csv         # Men's Non-Veg Menu (Day, Breakfast, Lunch, Snacks, Dinner)
+│   ├── VITC-M-S.csv         # Men's Special Menu (Day, Breakfast, Lunch, Snacks, Dinner)
+│   ├── VITC-M-V.csv         # Men's Veg Menu (Day, Breakfast, Lunch, Snacks, Dinner)
+│   ├── VITC-W-N.csv         # Women's Non-Veg Menu (Day, Breakfast, Lunch, Snacks, Dinner)
+│   ├── VITC-W-S.csv         # Women's Special Menu (Day, Breakfast, Lunch, Snacks, Dinner)
+│   └── VITC-W-V.csv         # Women's Veg Menu (Day, Breakfast, Lunch, Snacks, Dinner)
+├── json/                    # Generated JSON files (NocoDB API format)
 │   ├── en/                  # Source (English) JSONs generated from CSV
 │   ├── ta/                  # Tamil translations (generated via Gemini)
 │   └── hi/                  # Hindi translations (generated via Gemini)
-├── assets/                   # PWA icons and static assets
+├── assets/                  # PWA icons and static assets
 │   ├── icon-*.png           # App icons (various sizes)
 │   └── icon.svg             # Source icon
 ├── index.html               # Main PWA application
