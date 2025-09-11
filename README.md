@@ -16,6 +16,7 @@ This repository contains CSV data files and their corresponding JSON representat
 │   ├── VITC-CG-L.csv        # Laundry: Date and RoomNumber data
 │   ├── VITC-D1-L.csv        # Laundry: Date and RoomNumber data
 │   ├── VITC-D2-L.csv        # Laundry: Date and RoomNumber data
+│   ├── VITC-E-L.csv         # Laundry: Date and RoomNumber data
 │   ├── VITC-M-N.csv         # Men's Non-Veg Menu (Day, Breakfast, Lunch, Snacks, Dinner)
 │   ├── VITC-M-S.csv         # Men's Special Menu (Day, Breakfast, Lunch, Snacks, Dinner)
 │   ├── VITC-M-V.csv         # Men's Veg Menu (Day, Breakfast, Lunch, Snacks, Dinner)
@@ -195,7 +196,7 @@ The repository includes a web-based editor for updating the CSV data files:
 
 ### Supported Data Types
 
-**Laundry Schedules** (Block A, B, CB, CG, D1, D2):
+**Laundry Schedules** (Block A, B, CB, CG, D1, D2, E):
 - Date: Day of the month
 - RoomNumber: Room number ranges for laundry
 

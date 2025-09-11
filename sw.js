@@ -16,7 +16,7 @@ const urlsToCache = [
 // Cache JSON files and CSV files dynamically
 const dataFiles = [
   'VITC-A-L', 'VITC-B-L', 'VITC-CB-L', 'VITC-CG-L',
-  'VITC-D1-L', 'VITC-D2-L', 'VITC-M-N', 'VITC-M-S',
+  'VITC-D1-L', 'VITC-D2-L', 'VITC-E-L', 'VITC-M-N', 'VITC-M-S',
   'VITC-M-V', 'VITC-W-N', 'VITC-W-S', 'VITC-W-V'
 ];
 

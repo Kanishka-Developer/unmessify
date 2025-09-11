@@ -52,6 +52,15 @@ const fileDefinitions = {
         icon: '🏢',
         structure: ['Date', 'RoomNumber']
     },
+    'VITC-E-L.csv': {
+        name: 'VITC-E-L.csv',
+        displayName: 'Block E - Laundry',
+        description: 'Laundry schedule for Block E',
+        category: 'laundry',
+        subcategory: 'blocks',
+        icon: '\ud83c\udfe2',
+        structure: ['Date', 'RoomNumber']
+    },
     'VITC-D2-L.csv': {
         name: 'VITC-D2-L.csv',
         displayName: 'Block D2 - Laundry',
