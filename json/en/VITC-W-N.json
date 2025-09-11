@@ -2,87 +2,87 @@
   "list": [
     {
       "Id": 1,
-      "ncRecordId": "rec27cf4eec62df4",
-      "ncRecordHash": "16ca9cd2ff59399228fd42118d884b21",
+      "ncRecordId": "rec135d122673e44",
+      "ncRecordHash": "a19b3995b43fd2e1fb88af42cd9007ff",
       "Day": "Monday",
       "Breakfast": "FRENCH TOAST, ALOO PARANTHA, DAHI, PICKLE, SEMIYA KHICHDI,  TMC, BBJ",
       "Lunch": "RAJMA, TOMATO RICE, PICKLE, WHITE RICE, RASAM, PHULKA, MASALA BUTTERMIK, MOONG DAL , GOBHI 65, RAVA KESARI",
       "Snacks": "SAMOSA, MINT CHUTNEY, TAMARIND CHUTNEY, TMC",
       "Dinner": " EGG FRIED RICE, MIX VEG MACHURIAN, WHITE RICE, RASAM, CHOCOLATE MILK, COFFEE, SUGAR, WATERMELON ",
-      "CreatedAt": "2025-09-03 17:02:18+05:30",
-      "UpdatedAt": "2025-09-03 17:02:18+05:30"
+      "CreatedAt": "2025-09-11 15:34:39+05:30",
+      "UpdatedAt": "2025-09-11 15:34:39+05:30"
     },
     {
       "Id": 2,
-      "ncRecordId": "rec22d86002d6e04",
-      "ncRecordHash": "93f0a333db61d658f1c7bc229434f651",
+      "ncRecordId": "recfc17cacd6e9d4",
+      "ncRecordHash": "b285165c49e7d9f6c27bb1c6258e420f",
       "Day": "Tuesday",
       "Breakfast": "OMLETTE, IDLI ,VADA, SAMBAR, COCONUT CHUTNEY, VEGETABLE MASALA POHA, TOASTED BREAD, SLICED CUCUMBER, ONION ,TOMATO, TMC, BBJ",
       "Lunch": "PANNER BHURJI, BISBELLA BATH, POTATO CHIPS ,CURD ,  PHULKA , DAL, WHITE RICE , SUGAR, CUCUMBER, PAPAD, SUGAR  ONION CARROT, SALT, PICKLE, PAYASAM, GHEE",
       "Snacks": "VEG PUFF, TOMATO KETCHUP, TMC",
       "Dinner": "CRISPY THIN MASALA DOSA, SAMBAR, COCONUT CHUTNEY, PHULKA, ALOO CAPSICUM GRAVY, TOMATO THAKKU, WHITE RICE, RASAM,MILK, SUGAR, COFFEE, BANANA, PODI",
-      "CreatedAt": "2025-09-03 17:02:18+05:30",
-      "UpdatedAt": "2025-09-03 17:02:18+05:30"
+      "CreatedAt": "2025-09-11 15:34:39+05:30",
+      "UpdatedAt": "2025-09-11 15:34:39+05:30"
     },
     {
       "Id": 3,
-      "ncRecordId": "rec130dd2bad42f4",
-      "ncRecordHash": "22f3aed715818533063c1b87300ba7fd",
+      "ncRecordId": "rec7b23058a318e4",
+      "ncRecordHash": "bb0d240b85c428e338069fd559839cc9",
       "Day": "Wednesday",
       "Breakfast": "FFRENCH TOAST,POORI, ALOO SABZI, MIX VEG UTTHAPAM, COCONUT CHUTNEY, SAMBAR, TMC,BBJ",
       "Lunch": "CHICKEN PEPPER FRY (BOTH MESS), GHEE RICE WITH FRIED ONION AND FRIED CASHEW, PHULKA, DRY BHINDI, DAL MAKHNI, WHITE RICE, RASAM, ONION, LEMON, BUTTERMILK, PICKLE, GHEE PHULKA",
       "Snacks": "DAHI POORI, CHOPPED ONIONS, TAMARIND CHUTNEY, MINT CHUTNEY, MASALA DAHI, SEV, TMC",
       "Dinner": " CHOLE BHATURE, BOONDI RAITA, GULAB JAMUN, WHITE RICE, RASAM, PINEAPPLE, MILK,CURD, COFFEE, SUGAR",
-      "CreatedAt": "2025-09-03 17:02:18+05:30",
-      "UpdatedAt": "2025-09-03 17:02:18+05:30"
+      "CreatedAt": "2025-09-11 15:34:39+05:30",
+      "UpdatedAt": "2025-09-11 15:34:39+05:30"
     },
     {
       "Id": 4,
-      "ncRecordId": "reca80597e194694",
-      "ncRecordHash": "0f19ee062d9a8c7349ced2a495ccac8f",
+      "ncRecordId": "rec29214795642b4",
+      "ncRecordHash": "3513f1fa1501542f52e872e0ef3aea4a",
       "Day": "Thursday",
       "Breakfast": "BOILED EGG, ALOO PARATHA, DAHI,PICKLE, PONGAL, SAMBAR, KADALA CURRY, TMC,BBJ",
       "Lunch": "CHILLY GOBI (SEMI DRY), WHITE RICE, MINT RICE, CURD, DRUMSTICK KARAKUEZHAMBU, PHULKA, FRYUMS, CABBAGE PORIYAL,CHANA  TADKA, SUGAR, SALT, LEMON, ONION, CUCUMBER, CARROT, SOOJI KA HALWA  ",
       "Snacks": "DRY CAKE, TMC",
       "Dinner": "IDLI, SAMBAR, COCONUT CHUTNEY, KOFTA CURRY, PHULKA,  WHITE RICE, RASAM, MILK, CURD,SUGAR, COFFEE, BANANA ",
-      "CreatedAt": "2025-09-03 17:02:18+05:30",
-      "UpdatedAt": "2025-09-03 17:02:18+05:30"
+      "CreatedAt": "2025-09-11 15:34:39+05:30",
+      "UpdatedAt": "2025-09-11 15:34:39+05:30"
     },
     {
       "Id": 5,
-      "ncRecordId": "rec6005b61981b54",
-      "ncRecordHash": "ed609da6042c34dc846c809a8e2cfb3f",
+      "ncRecordId": "rec65fb36deda5b4",
+      "ncRecordHash": "25dc60e002ce35ac20d73a023e6f37d6",
       "Day": "Friday",
       "Breakfast": "OMLETTE, CRISPY THIN DOSA,VADACURRY,  SAMBAR, COCONUT CHUTNEY, SABUDANA KHICHDI, TMC, BBJ",
       "Lunch": "DUM  ALOO CURRY, PHULKA, TOMATO RICE, DAL TADKA, RASAM, MASALA BUTTERMILK, PICKLE, ONION CUCUMBER ,PICKLE, PAPAD, ",
       "Snacks": "BREAD PAKORA, MINT CHUTNEY, TAMARID CHUTNEY, TMC",
       "Dinner": "MURGH LABABDAAR , BUTTER PHULKA, WHITE RICE, RASAM,LEMON, CHOCOLATE/ STAWBERRY ICE CREAM, MILK, SUGAR, COFFEE",
-      "CreatedAt": "2025-09-03 17:02:18+05:30",
-      "UpdatedAt": "2025-09-03 17:02:18+05:30"
+      "CreatedAt": "2025-09-11 15:34:39+05:30",
+      "UpdatedAt": "2025-09-11 15:34:39+05:30"
     },
     {
       "Id": 6,
-      "ncRecordId": "rec7ffc7e71ba614",
-      "ncRecordHash": "13f21662aecd9ed93a0cb928599f205d",
+      "ncRecordId": "rec8ae5807588224",
+      "ncRecordHash": "09ade22543780d182f0b4dfbbbdd5dd5",
       "Day": "Saturday",
       "Breakfast": " PAV BHAJI, CHOPPED ONIONS, VEGETABLE UPMA, COCONUT CHUTNEY, SAMBAR, TMC,BBJ ",
       "Lunch": "MIX VEG DRY PORIYAL, KADHAI PANNER, PHULKA, JEERA RICE, GREEN DAL, RASAM, RADISH SAMBAR, CURD, SUGAR, ONION, CUCUMBER ",
       "Snacks": "PANI POORI, TMC",
       "Dinner": "PODI IDLI,MINT CHUTNEY,COCONUT CHUTNEY, EGG ROAST SEMI DRY,SAMBAR, PHULKA, WHITE RICE, RASAM, GHEE, MILK, COFFEE",
-      "CreatedAt": "2025-09-03 17:02:18+05:30",
-      "UpdatedAt": "2025-09-03 17:02:18+05:30"
+      "CreatedAt": "2025-09-11 15:34:39+05:30",
+      "UpdatedAt": "2025-09-11 15:34:39+05:30"
     },
     {
       "Id": 7,
-      "ncRecordId": "rec5a1185cd971c4",
-      "ncRecordHash": "2c18bbb0665e69e39f1ce0838561723c",
+      "ncRecordId": "rec41d6f414cc714",
+      "ncRecordHash": "e19be809312fa0f126432178f699f7cc",
       "Day": "Sunday",
       "Breakfast": "GOBHI PARATHA, DAHI, PICKLE, IDLI, VADA, SAMBAR, COCONUT CHUTNEY , TMC,BBJ ",
       "Lunch": "HYDERABADI CHICKEN BIRYANI, BOILED EGG, MIRCHI KA SALAN, LEMON JUICE, ONION, CUCUMBER RAITA, CUCUMBER, TOMATO , CURD RICE",
       "Snacks": "MACRONI, TOMATO KETCHUP, TMC",
       "Dinner": "ONION UTTHAPAM, SAMBAR, COCONUT CHUTNEY, WHITE RICE, RASAM, PAPAYA, CHOCOLATE MILK, SUGAR, COFFEE",
-      "CreatedAt": "2025-09-03 17:02:18+05:30",
-      "UpdatedAt": "2025-09-03 17:02:18+05:30"
+      "CreatedAt": "2025-09-11 15:34:39+05:30",
+      "UpdatedAt": "2025-09-11 15:34:39+05:30"
     }
   ],
   "pageInfo": {
