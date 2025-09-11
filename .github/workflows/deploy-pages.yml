@@ -1,6 +1,18 @@
 name: Deploy to GitHub Pages
 
 on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'index.html'
+      - 'editor.html'
+      - 'app.js'
+      - 'editor.js'
+      - 'styles.css'
+      - 'editor-styles.css'
+      - 'sw.js'
+      - 'assets/**'
+      - 'json/**'
   workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
@@ -15,98 +27,20 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Convert CSV to JSON
-  convert-data:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
-    
-    - name: Setup Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.11'
-    
-    - name: Install Python dependencies
-      run: |
-        python -m pip install --upgrade pip
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; else pip install google-generativeai; fi
-
-    - name: Determine changed CSVs and target JSONs
-      id: changes
-      shell: bash
-      run: |
-        set -e
-        if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-          # On manual dispatch, process all
-          ls csv/*.csv > changed_csvs.txt || true
-        else
-          if [ -n "${{ github.sha }}" ] && git rev-parse --verify HEAD >/dev/null 2>&1; then
-            git diff --name-only HEAD~1 HEAD -- 'csv/**/*.csv' > changed_csvs.txt || true
-          else
-            git ls-files 'csv/**/*.csv' > changed_csvs.txt || true
-          fi
-        fi
-        : > changed_jsons.txt
-        if [ -s changed_csvs.txt ]; then
-          while IFS= read -r f; do
-            bn=$(basename "$f")
-            name="${bn%.csv}.json"
-            echo "json/en/$name" >> changed_jsons.txt
-          done < changed_csvs.txt
-        fi
-        csv_count=$(grep -c . changed_csvs.txt || true)
-        json_count=$(grep -c . changed_jsons.txt || true)
-        echo "csv_count=$csv_count" >> $GITHUB_OUTPUT
-        echo "json_count=$json_count" >> $GITHUB_OUTPUT
-        echo "Changed JSON targets (json/en):"
-        cat changed_jsons.txt || true
-
-    - name: Convert changed CSV files to JSON
-      if: steps.changes.outputs.csv_count != '0'
-      run: python convert_csv_to_json.py --from-file changed_csvs.txt
-
-    - name: Translate changed menus to Tamil/Hindi (Gemini)
-      if: steps.changes.outputs.json_count != '0'
-      env:
-        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-      run: python translate_menus.py --langs ta hi --from-file changed_jsons.txt
-
-    - name: Ensure laundry JSON parity (copy)
-      if: steps.changes.outputs.json_count != '0'
-      run: python translate_menus.py --parity-only --from-file changed_jsons.txt --langs ta hi
-    
-    - name: Upload JSON artifacts
-      uses: actions/upload-artifact@v4
-      with:
-        name: json-data
-        path: json/
-        retention-days: 1
-
-  # Build and deploy to GitHub Pages
   deploy:
-    needs: convert-data
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v4
-    
-    - name: Download JSON artifacts
-      uses: actions/download-artifact@v4
-      with:
-        name: json-data
-        path: json/
-    
+
     - name: Setup Pages
       uses: actions/configure-pages@v4
-    
+
     - name: Upload to GitHub Pages
       uses: actions/upload-pages-artifact@v3
       with:
         path: '.'
-    
+
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v4
