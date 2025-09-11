@@ -1,38 +1,86 @@
 Day,Breakfast,Lunch,Snacks,Dinner
-Monday,"Idli, Sambhar, aloo parotta,curd,pickle,tomato chutney, butter,jam,tea, coffee,
-","Karakolambu, Achari Paneer do Pyaza, Dal fry, phulka, Rasam, White Rice, Carrot Beans poriyal, Appalam, Cucumber, Curd, Pickle, sugar, salt
-","Noodles with Ketchup, TMC
-","Masala dosa, white chutney, sambhar, Aloo Peas Gobi gravy, Phulka, White rice, Rasam, Pineapple, Milk and coffee
-"
-Tuesday,"Semya Upma, Poori, White channa masala gravy, pineapple kesari , paruppu vada, sprouts, TMC , BBJ
-","Bisbillabath, Ladies Finger poriyal, White Rice, Rasam, Pickle , phulka, potato chips, moong daal, rice payasam, lemon juice, salt
-","Sweet corn, tomato,onion,TMC
-","Fried Podi idli, Coconut Chutney,Kofta gravy, Chappathi, sambar , Chocolate milk,White rice, Rasam, Pickle
-"
-Wednesday," Thin crispy dosa, Vada curry,poha,lemon ,TMC , BBJ
-","Rajma, Jeera rice, phulka, coconut rice, masala potato fry, white rice, rasam, pickle, tadka buttermilk, fryums, salt
-","vada pav with green chilli/sundal , TMC
-","chola poori, lemon, onion, white channa gravy, vegetable rava idli, groundnut chutney, watermelon
-"
-Thursday,"Paneer Paratha, Curd, Pickle, Pongal, Medhu Vada, sambhar, white chutney,TMC , BBJ
-","Raw Mango Sambhar, Aviyal, Vegetable Pulao, Boondhi Raita, White Rice, Chappathi, Soya Bean gravy, Rasam, Pickle, Bat chips, semiya payasam, Sugar, salt
-","Veg puff ,sause TMC
-","Thin dosa, onion tomato thokku, rajma gravy , chapati , jalebi , milk and coffee
-
-"
-Friday,"Rava upma, white chutney, sprouts,ragi puttu, cherupayiru , shredded coconut , sambhar TMC , BBJ
-","yam poriyal,white rice, rasam, pickle, methi matar malai gravy, morekolumbu with vada , phulka,  curd
-","Mysore bonda, white chutney,TMC,   
-","stuffed kulcha , palak panner ,white rice , rasam , moong dal, phulka, onion, lemon, banana
-"
-Saturday," Paav Bhaji, Kichadi, white chutney, vada , TMC , BBJ 
-","white rice, rasam,raddish sambhar,ghee rice with caramalised onion, phulka, beetroot poriyal, dal, aloo palak gravy, appalam, buttermilk
-","potato samosa, green chutney , sweet chutney , sause TMC
-","schezwan fried rice , gobi manchurian , black canna gravy ,  phulka , white rice , rasam , badam milk . 
-
-"
-Sunday,"Idiyappam, Coconut milk,kadala curry, gobi paratha,curd,pickle ,BBJ,TMC 
-","white rice, channa dal,, ghee , veg soya briyani , onion cucumber raita , gobi 65 , curdrice ,chapati, navratan kurma, chilled mint lemon juice ,fryums.
-","pani puri/dahi puri TMC
-","thin podi dosa , white chutney , sambar , dal makhani , phulka , mix veg gravy ,white rice ,rasam , and ice-cream available that week gulab jamun.  
-"
+Monday,"1. Pav Bajji, Masala, Chopped Onion
+2. Idly, Vada, Sambar, Tomato Chutney
+3. Tea, Milk, Coffee
+4. Bread, Butter, Jam","1. Ajwain Chapathi, Veg Kofta
+2. Brinji Rice, Carrot Raitha
+3. White Rice, Drumstick Sambar, Rasam, Dry Bhindi Fry
+4. Parrupu Podi, Ghee, Thovaiyal, Pickle, Papad
+5. Butter Milk
+6. Fruit - Papaya","1. Papdi Chat / Vada Pav
+2. Tea, Coffee, Milk","1. Chapathi, Rajma Masala
+2. Tomato Sevai / Lemon Sevai, Chutney
+3. White Rice, Black dal, Rasam, French Fries, Curd
+4. Ice cream
+5. Milk, Salad (Carrot, Beetroot)"
+Tuesday,"1. Idiyappam, Coconut Milk, veg stew
+2. Aloo paratha, Curd, Pickle
+3. Tea, Milk, Coffee
+4. Brown Bread, Butter, Jam","1. Chapathi, Veg Chana Masala
+2. Carrot rice / Coconut rice
+3. White Rice, Green Dhal, Potato Poriyal, Rasam, Curd
+4. Parrupu podi, Ghee, Thovaiyal, Pickle, Bat Fryums
+5. Fruit - Watermelon","1. Boiled Black Sundal with tadka / Boiled Sweet corn + Masala + Lemon 
+2. Tea, Coffee, Milk","1. Podi Uttappam, Sambar, Tomato Chutney
+2. Phulka, Paneer Butter Masala
+3. White Rice, Sambar, Rasam, Cabbage Poriyal, Butter Milk
+4. Gulab Jamun, Milk"
+Wednesday,"1. Thin dosa, Vadacurry, Groundnut Chutney
+2. Poha (carrot, beans, peas and aloo), onion
+3. Tea, Milk, Coffee
+4. Bread, Butter, Jam","1. Chapathi, Veg Sabji
+2. Paneer Pulav
+3. White Rice, Lady's finger Puli Kolumbu, Rasam, Beans Poriyal, Curd
+4. Parrupu podi, Gingeli oil, Thovaiyal , pickle, Potato Chips
+5. Salad, Lemon Mint Juice","1. Kachodi + Tamarind Chutney / Samosa 
+2. Tea, Coffee, Milk","1. Masala Dosa, Sambar, Chutney
+2. Chapathi, Green Peas Capsicum Masala
+3. White Rice, Dal, Rasam, Pumpkin Poriyal, Buttermilk
+4. Banana, Milk"
+Thursday,"1. Vegetable Rava idly, Sambar, Mint Chutney
+2. Poori, Aloo Masala
+3. Tea, Milk, Coffee
+4. Brown Bread, Butter, Jam","1. Phulka, Soya Chunks curry
+2. Veg Pulav + Boondi Raitha / Mint Rice
+3. White Rice, Raddish Sambar, Tomato Rasam, Dry Keerai Poriyal, Buttermilk 
+4. Parrupu Podi, Ghee, Thovaiyal, Pickle, Papad
+5. Fruit - Pineapple","1. Keerai Bonda + Chutney / Banana bajji 
+2. Tea, Coffee, Milk","1. Wheat Veg Upma / Veg Semiya upma, Coconut Chutney
+2. Chapathi, Jeera dhal
+3. White Rice, Rasam, Dry Vazhakkai Poriyal, Curd
+4. Jalebi, Milk, Salad, (Onion, Carrot, Cucumber)"
+Friday,"1. Pesarattu Dosa, Parupu Vada, Veg stew 
+2. Veg Khichdi / Sabudana Kichadi, Curd
+3. Tea, Milk, Coffee
+4. Bread, Butter, Jam","1. Chapathi, Spinach dal, Aloo peas masala
+2. Bisibelebath / Vangibath 
+3. White Rice, Moor Kulambu, Carrot Poriayal, Rasam, Curd
+4. Parrupu podi, ghee, Thovaiyal, Pickle, Bat Fryums
+5. Lemon Mint Juice","1. White Sauce Pasta / Sandwich 
+2. Tea, Coffee, Milk","1. Veg Biriyani, Raitha, Paneer Manchurian
+2. Chapathi, Kashmiri aloo dum
+3. White Rice, Rasam, Butter Milk
+4. Fruit Custard, Milk"
+Saturday,"1. Pongal, Medhu Vada, Sambar, Chutney
+2. Palak Paratha, Curd, Tomato gravy
+3. Tea, Milk, Coffee
+4. Brown Bread, Butter, Jam","1. Chappathi, Dal Tadka
+2. Tamarind rice / Methi Rice 
+3. White Rice, Avarakkai Sambar, Rasam, Beetroot Poriyal, Curd 
+4. Parrupu podi, Gingely oil, Thovaiyal, Pickle, papad
+5. Fruit Salad","1. Dahi puri  / Pazhampori 
+2. Tea, Coffee, Milk","1. Oil Chapathi, Peas Gravy
+2. White Rice, Cabbage Paruupu kootu, Rasam, Appalam , Butter Milk
+3. Salad (Onion, Carrot, Cucumber)
+4. Chocolate Milk / Badam Milk "
+Sunday,"1. White Puttu, Kadala Curry, Grated Coconut, Banana, Sugar, Ghee
+2. Moong dhal paratha, Curd, Pickle
+3. Tea, Milk, Coffee
+4. Bread, Butter, Jam","1. Veg Biriyani, Gobi 65, Onion Raitha, Brinjal Curry
+2. Phulka, Matter Paneer
+3. White rice, Rasam, Curd Rice, Pickle
+4. Pineapple Kesari, Lemon Juice ","1. Bread Pakoda / Onion Pakoda
+2. Tea, Coffee, Milk","1. Chole Bhature, White Chenna Masala, Mirchi Raitha 
+2. Methi Pulav
+3. White Rice, Andhra Dhal, Rasam, Mix veg poriyal, Butter Milk
+4. Salad (Tomato + Cucumber + Carrot + Lemon), Milk "
