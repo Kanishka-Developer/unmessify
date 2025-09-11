@@ -147,6 +147,7 @@
       "orgs": ["vitc"]
     },
     "sys": {
+      "announcement_170": ["Unmessify News", "<b><u>Version 1.7.0 is here!</u></b><br><br>• Added E Block 🏡<br>• Updated Caterers 🧑‍🍳<br>• Better Android 15+ Support 📱<br>• Migrated to GitHub 🐙😸<br>• Removed Firebase 🔥<br>• Removed NocoDB 📚<br>• Initial i18n work 🌐<br>• More reliable AD loading 💸<br>• Made optimizations throughout the app 🚀<br>• Added new bugs to squash in future releases 🐛<br><br><b>Help Required: Unmessify is an unofficial mess app run by unpaid students. We need you to send us updated mess menus, laundry schedules, announcements, etc. Please WhatsApp us at +919038077102.</b>"],
       "curAppVersion": 170,
       "minAppVersion": 170,
       "newVersionLink": "https://play.google.com/store/apps/details?id=tech.kaffeine.unmessify"
