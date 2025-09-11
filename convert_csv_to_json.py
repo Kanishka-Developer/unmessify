@@ -9,6 +9,8 @@ import os
 from datetime import datetime, timezone, timedelta
 import hashlib
 import uuid
+import argparse
+from typing import List
 
 # Add IST timezone (UTC+5:30)
 IST = timezone(timedelta(hours=5, minutes=30))
@@ -69,37 +71,74 @@ def convert_csv_to_nocodb_json(csv_file_path, table_name):
     
     return result
 
+def _read_lines_file(path: str) -> List[str]:
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            return [ln.strip() for ln in f.readlines() if ln.strip()]
+    except FileNotFoundError:
+        return []
+
+
 def main():
-    """Main function to process all CSV files"""
+    """Main function to process CSV files (optionally only a provided subset)"""
+    parser = argparse.ArgumentParser(description="Convert CSV files to json/en/*.json (NocoDB API-like format)")
+    parser.add_argument("--files", nargs="*", help="Specific CSV files to process (e.g., csv/VITC-A-L.csv)")
+    parser.add_argument("--from-file", dest="from_file", help="Text file containing newline-separated CSV paths to process selectively")
+    args = parser.parse_args()
+
     csv_dir = "csv"
     json_dir = os.path.join("json", "en")
-    
+
     # Create json/en directory if it doesn't exist
     os.makedirs(json_dir, exist_ok=True)
-    
-    # Process each CSV file
-    for filename in os.listdir(csv_dir):
-        if filename.endswith('.csv'):
-            csv_path = os.path.join(csv_dir, filename)
-            table_name = filename[:-4]  # Remove .csv extension
-            
-            print(f"Converting {filename} to JSON...")
-            
-            try:
-                json_data = convert_csv_to_nocodb_json(csv_path, table_name)
-                
-                # Save JSON file
-                json_filename = f"{table_name}.json"
-                json_path = os.path.join(json_dir, json_filename)
-                
-                with open(json_path, 'w', encoding='utf-8') as jsonfile:
-                    json.dump(json_data, jsonfile, indent=2, ensure_ascii=False)
-                
-                print(f"✓ Created {json_filename}")
-                
-            except Exception as e:
-                print(f"✗ Error processing {filename}: {str(e)}")
-    
+
+    # Build list of CSVs to process
+    selected: List[str] = []
+    if args.files:
+        selected.extend(args.files)
+    if args.from_file:
+        selected.extend(_read_lines_file(args.from_file))
+
+    # Normalize to paths within csv_dir when needed
+    selected = [
+        p if os.path.isabs(p) or p.startswith(csv_dir + os.sep) or p.startswith(csv_dir + "/")
+        else os.path.join(csv_dir, p)
+        for p in selected
+    ]
+    selected = [p for p in selected if p and p.lower().endswith(".csv") and os.path.exists(p)]
+
+    # When no selection provided, process all CSV files (local/dev use)
+    if not selected:
+        selected = [os.path.join(csv_dir, f) for f in os.listdir(csv_dir) if f.lower().endswith(".csv")]
+
+    if not selected:
+        print("No CSV files to process.")
+        return
+
+    print(f"Processing {len(selected)} CSV file(s)...")
+
+    # Process each selected CSV file
+    for idx, csv_path in enumerate(sorted(selected), 1):
+        filename = os.path.basename(csv_path)
+        table_name = filename[:-4]  # Remove .csv extension
+
+        print(f"[{idx}/{len(selected)}] Converting {filename} -> json/en/{table_name}.json")
+
+        try:
+            json_data = convert_csv_to_nocodb_json(csv_path, table_name)
+
+            # Save JSON file
+            json_filename = f"{table_name}.json"
+            json_path = os.path.join(json_dir, json_filename)
+
+            with open(json_path, 'w', encoding='utf-8') as jsonfile:
+                json.dump(json_data, jsonfile, indent=2, ensure_ascii=False)
+
+            print(f"  ✓ Wrote {json_filename}")
+
+        except Exception as e:
+            print(f"  ✗ Error processing {filename}: {str(e)}")
+
     print("\nConversion complete!")
 
 if __name__ == "__main__":

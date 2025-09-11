@@ -24,6 +24,7 @@ This repository contains CSV data files and their corresponding JSON representat
 │   ├── VITC-W-S.csv         # Women's Special Menu (Day, Breakfast, Lunch, Snacks, Dinner)
 │   └── VITC-W-V.csv         # Women's Veg Menu (Day, Breakfast, Lunch, Snacks, Dinner)
 ├── json/                    # Generated JSON files (NocoDB API format)
+│   ├── core.json            # Core config and metadata
 │   ├── en/                  # Source (English) JSONs generated from CSV
 │   ├── ta/                  # Tamil translations (generated via Gemini)
 │   └── hi/                  # Hindi translations (generated via Gemini)
@@ -221,3 +222,5 @@ To contribute data updates:
 4. Replace the old CSV file with your updated version
 5. Create a pull request with a clear description of changes
 6. Wait for review and merge
+
+We welcome contributions to keep the data accurate and up-to-date!

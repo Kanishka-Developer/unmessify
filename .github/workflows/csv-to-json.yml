@@ -53,20 +53,23 @@ jobs:
             echo "json/en/$name" >> changed_jsons.txt
           done < changed_csvs.txt
         fi
-        count=$(grep -c . changed_jsons.txt || true)
-        echo "count=$count" >> $GITHUB_OUTPUT
+        csv_count=$(grep -c . changed_csvs.txt || true)
+        json_count=$(grep -c . changed_jsons.txt || true)
+        echo "csv_count=$csv_count" >> $GITHUB_OUTPUT
+        echo "json_count=$json_count" >> $GITHUB_OUTPUT
         echo "Changed JSON targets (json/en):"
         cat changed_jsons.txt || true
     
-    - name: Convert CSV files to JSON
-      run: python convert_csv_to_json.py
+    - name: Convert changed CSV files to JSON
+      if: steps.changes.outputs.csv_count != '0'
+      run: python convert_csv_to_json.py --from-file changed_csvs.txt
 
     - name: Translate changed menus to Tamil/Hindi (Gemini)
-      if: env.GEMINI_API_KEY != '' && steps.changes.outputs.count != '0'
+      if: env.GEMINI_API_KEY != '' && steps.changes.outputs.json_count != '0'
       run: python translate_menus.py --langs ta hi --from-file changed_jsons.txt
 
     - name: Ensure laundry JSON parity (copy)
-      if: steps.changes.outputs.count != '0'
+      if: steps.changes.outputs.json_count != '0'
       run: python translate_menus.py --parity-only --from-file changed_jsons.txt --langs ta hi
     
     - name: Check for changes
@@ -79,7 +82,7 @@ jobs:
         fi
     
     - name: Commit and push changes
-      if: steps.verify-changed-files.outputs.changed == 'true'
+      if: steps.verify-changed-files.outputs.changed == 'true' && github.event_name == 'push'
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
