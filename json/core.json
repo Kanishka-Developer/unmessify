@@ -11,7 +11,8 @@
             "D1": "\"VITC-D1-L\"",
             "D2": "\"VITC-D2-L\"",
             "E": "\"VITC-E-L\""
-          }
+          },
+          "timestamp": "\"09\/01\/2025 00:00:00\""
         },
         "mess": {
           "tables": {
@@ -137,7 +138,8 @@
             "E-1-N": "[\"J Sathya PR Non-Veg\",\"Mess announcements will be made here.\"]",
             "E-1-S": "[\"J Sathya PR Special\",\"Mess announcements will be made here.\"]",
             "E-1-V": "[\"J Sathya PR Veg\",\"Mess announcements will be made here.\"]"
-          }
+          },
+          "timestamp": "\"09\/01\/2025 00:00:00\""
         }
       }
     },
