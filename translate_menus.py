@@ -149,6 +149,10 @@ def translate_fields(
     target_lang: str,
     keys: List[str],
 ) -> Dict[str, Any]:
+    """
+    Legacy helper kept for potential reuse. Not used by the new batch flow.
+    Performs a single-record translation request.
+    """
     # Common content to send
     base_content = [
         SYSTEM_PROMPT,
@@ -209,9 +213,117 @@ def translate_fields(
     return out
 
 
+def translate_menu_batch(
+    model,
+    records: List[Dict[str, Any]],
+    target_lang: str,
+) -> List[Dict[str, Any]]:
+    """
+    Translate all menu records in ONE API REQUEST for a given language.
+
+    Returns a list of dicts with translated values for TRANSLATABLE_FIELDS,
+    preserving array length and order.
+    """
+    keys = TRANSLATABLE_FIELDS
+    # Build minimal payload of only translatable fields to avoid any accidental edits.
+    payload_list: List[Dict[str, Any]] = []
+    for rec in records:
+        item: Dict[str, Any] = {}
+        for k in keys:
+            val = rec.get(k)
+            item[k] = (str(val) if val is not None else None)
+        payload_list.append(item)
+
+    # Compose the prompt content
+    base_content = [
+        SYSTEM_PROMPT,
+        f"Target language code: {target_lang}",
+        SCRIPT_HINTS.get(target_lang, ""),
+        (
+            "You will receive an array named 'records'. Each item has keys: "
+            f"{', '.join(keys)}. Translate ONLY the values to the target language using its native script. "
+            "Keep numbers, commas, slashes, hyphens, and parentheses exactly as-is. "
+            "Do NOT add or remove items, do NOT reorder, and return EXACTLY a JSON object with key 'records' "
+            "whose value is an array of the same length of objects with the SAME keys."
+        ),
+        "records:",
+        json.dumps(payload_list, ensure_ascii=False),
+    ]
+
+    def _invoke(stronger: bool = False) -> List[Dict[str, Any]]:
+        content = list(base_content)
+        if stronger:
+            content.insert(
+                0,
+                "STRICT: Use only the native script (no Latin letters) for words. Keep numbers and punctuation as-is.",
+            )
+        response = model.generate_content(
+            content,
+            generation_config={
+                "response_mime_type": "application/json",
+                "temperature": 0.2,
+            },
+        )
+        text = (response.text or "").strip()
+        try:
+            obj = json.loads(text)
+        except json.JSONDecodeError:
+            return []
+        # Accept either {"records": [...]} or just [...]
+        recs = None
+        if isinstance(obj, dict) and isinstance(obj.get("records"), list):
+            recs = obj.get("records")
+        elif isinstance(obj, list):
+            recs = obj
+        else:
+            return []
+        # Validate structure: list of dicts with required keys
+        if not isinstance(recs, list) or len(recs) != len(payload_list):
+            return []
+        cleaned: List[Dict[str, Any]] = []
+        for item in recs:
+            if not isinstance(item, dict):
+                return []
+            cleaned.append({k: item.get(k) for k in keys})
+        return cleaned
+
+    # First attempt in one request
+    out_list = _invoke(stronger=False)
+    if not out_list:
+        # fallback to original payload (no translation)
+        out_list = payload_list
+    # Check for transliteration issues; if too many look wrong, retry once stronger
+    bad_count = 0
+    total_checked = 0
+    for item in out_list:
+        for v in item.values():
+            if v is None:
+                continue
+            total_checked += 1
+            if isinstance(v, str) and v.strip():
+                if not _has_target_script(v, target_lang):
+                    bad_count += 1
+    # Retry if more than 25% of checked values appear transliterated
+    if total_checked > 0 and bad_count / total_checked > 0.25:
+        retry = _invoke(stronger=True)
+        if retry:
+            out_list = retry
+    # Ensure all mandatory keys present; fill missing with source
+    fixed: List[Dict[str, Any]] = []
+    for src_item, out_item in zip(payload_list, out_list):
+        merged: Dict[str, Any] = {}
+        for k in keys:
+            val = out_item.get(k) if isinstance(out_item, dict) else None
+            if val is None:
+                val = src_item.get(k)
+            merged[k] = val
+        fixed.append(merged)
+    return fixed
+
+
 def translate_record(model, record: Dict[str, Any], lang: str) -> Dict[str, Any]:
+    """Single-record translation (unused in batch flow). Kept for completeness."""
     out = dict(record)
-    # Build payload only for translatable fields; keep Day unchanged
     payload = build_translation_payload(record, TRANSLATABLE_FIELDS)
     translated = translate_fields(model, payload, lang, TRANSLATABLE_FIELDS)
     for k, v in translated.items():
@@ -227,15 +339,21 @@ def translate_file(src_path: str, langs: List[str]) -> Dict[str, str]:
     for lang in langs:
         model = genai.GenerativeModel(MODEL_NAME)  # type: ignore
         translated_data = dict(data)
-        translated_list = []
-        for i, rec in enumerate(data.get("list", [])):
-            # Only modify menu fields; keep other keys as-is
-            translated_rec = translate_record(model, rec, lang)
-            translated_list.append(translated_rec)
-            # brief pacing to avoid rate limits
-            if (i + 1) % 8 == 0:
-                time.sleep(0.5)
-        translated_data["list"] = translated_list
+        src_list: List[Dict[str, Any]] = list(data.get("list", []))
+        # ONE REQUEST per menu file per language
+        translated_fields_list = translate_menu_batch(model, src_list, lang)
+        # Merge translated fields back into full records (preserve Day and other keys)
+        merged_list: List[Dict[str, Any]] = []
+        for rec, tfields in zip(src_list, translated_fields_list):
+            new_rec = dict(rec)
+            for k in TRANSLATABLE_FIELDS:
+                if tfields is not None and isinstance(tfields, dict) and k in tfields:
+                    new_rec[k] = tfields[k]
+            # Explicitly preserve Day as-is from source
+            if "Day" in rec:
+                new_rec["Day"] = rec["Day"]
+            merged_list.append(new_rec)
+        translated_data["list"] = merged_list
 
         out_path = os.path.join(OUT_DIRS[lang], base)
         save_json(out_path, translated_data)

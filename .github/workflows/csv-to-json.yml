@@ -1,12 +1,6 @@
 name: Convert CSV to JSON
 
 on:
-  push:
-    paths:
-      - 'csv/**/*.csv'
-  pull_request:
-    paths:
-      - 'csv/**/*.csv'
   workflow_dispatch: # Allow manual triggering
 
 jobs:

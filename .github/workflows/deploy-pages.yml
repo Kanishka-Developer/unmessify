@@ -1,14 +1,6 @@
 name: Deploy to GitHub Pages
 
 on:
-  push:
-    branches: [ main ]
-    paths:
-      - '*.html'
-      - '*.js'
-      - '*.css'
-      - 'assets/**'
-      - 'json/**'
   workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
@@ -77,11 +69,11 @@ jobs:
       if: steps.changes.outputs.count != '0'
       env:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-      run: python translate_menus.py --langs ta hi --from-file changed_jsons.txt
+      run: python translate_menus.py --from-file changed_jsons.txt
 
     - name: Ensure laundry JSON parity (copy)
       if: steps.changes.outputs.count != '0'
-      run: python translate_menus.py --parity-only --from-file changed_jsons.txt --langs ta hi
+      run: python translate_menus.py --parity-only --from-file changed_jsons.txt
     
     - name: Upload JSON artifacts
       uses: actions/upload-artifact@v4
