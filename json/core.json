@@ -78,7 +78,7 @@
             "E-1-V": "VITC-M-V"
           },
           "announcements": {
-            "A-1-N": ["Rassense Non-Veg","Mess announcements will be made here."],
+            "A-1-N": ["Rassense Non-Veg","<p align=\"center\"><b><u>FEAST MENU</u></b></p><br><br><p align=\"center\"><b>APPETIZER</b></p><br><p>• Hariyali Kebab<br>• Chicken Mamtaj<br>• Russian Salad</p><br><hr><br><p align=\"center\"><b>MAIN COURSE</b></p><br><p>• Saffron Pulao<br>• Bagara Dhall<br>• White Rice<br>• Lemon Rasam</p><br><hr><br><p align=\"center\"><b>DESSERTS & BEVERAGES</b></p><br><p>• Pudding Cake<br>• Chocolate Milkshake<br>• Coconut Dry Jamun<br>• Banana</p>"],
             "A-1-S": ["Fusion Special","Mess announcements will be made here."],
             "A-1-V": ["Rassense Veg","Mess announcements will be made here."],
             "A-2-N": ["Fusion Non-Veg","Mess announcements will be made here."],
