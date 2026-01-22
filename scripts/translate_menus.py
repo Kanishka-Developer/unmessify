@@ -43,7 +43,7 @@ OUT_DIRS = {
     "ta": os.path.join("json", "ta"),
     "hi": os.path.join("json", "hi"),
 }
-MODEL_NAME = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
+MODEL_NAME = os.environ.get("GEMINI_MODEL", "gemini-flash-latest")
 
 MENU_FIELDS = ["Day", "Breakfast", "Lunch", "Snacks", "Dinner"]
 # Only these fields should be translated; 'Day' must remain exactly as-is
