@@ -26,7 +26,7 @@ def convert_csv_to_nocodb_json(csv_file_path, table_name):
     """Convert a CSV file to NocoDB API JSON format"""
     records = []
     
-    with open(csv_file_path, 'r', encoding='utf-8') as csvfile:
+    with open(csv_file_path, 'r', encoding='utf-8-sig') as csvfile:
         # Read the CSV
         reader = csv.DictReader(csvfile)
         
@@ -34,7 +34,7 @@ def convert_csv_to_nocodb_json(csv_file_path, table_name):
             # Convert empty strings to None for consistency with example
             cleaned_row = {}
             for key, value in row.items():
-                cleaned_row[key] = value if value.strip() else None
+                cleaned_row[key.strip()] = value.strip() if value.strip() else None
             
             # Create record in NocoDB format
             now_ist = datetime.now(IST).isoformat(timespec='seconds').replace('T', ' ')
