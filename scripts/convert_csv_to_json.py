@@ -72,7 +72,7 @@ def convert_csv_to_nocodb_json(csv_file_path, table_name):
 def main():
     """Main function to process all CSV files"""
     csv_dir = "csv"
-    json_dir = os.path.join("json", "en")
+    json_dir = os.path.join("json", "edge", "en")
     
     # Create json/en directory if it doesn't exist
     os.makedirs(json_dir, exist_ok=True)

@@ -1,92 +1,94 @@
-Day,Breakfast,Lunch,Snacks,Dinner
-Monday,"1.Onion Dosa + Sambar+ Mint coriander & curry leaves chutney
-2. Puri + Puri masala (potato)
-3. Egg Masala Omlet
-4.Bread + Butter + Jam
-5. Tea / Coffee / Milk","1. Phulka + Dal Datka
-2. Tomato Rice + GOBI 65
-3. White Rice + Chettinad sambar + Uduppi Tomato Rasam + Curd+ Fryums
-4. Parupu podi + Ghee + Thovaiyal+Papad
-5. pineapple +Pickle+Butter milk","Tea cake Ginger
-Tea /Coffee/Milk","1. Chapati + Mix veg gravy + Dal
-2. White Rice +Rasam+ Mix Veg Poriyal
-3. Idly+Podi+oil+Mint chutney+sambar
-4. Salad(carrot+tomato+lemon)+ Milk +Gulab Jamun"
-Tuesday,"1.Paneer Paratha +Tomoto Onion Grevy + Curd
-2. Millet Pongal+Vada + Samabr + Coconut chutny
-3. Boiled Egg (Dispense in Hot water)
+Days,Breakfast,Lunch,Snacks,Dinner
+"Monday","1. Onion Dosa + Sambar + Mint Coriander & Curry Leaves Chutney
+2. Puri + Puri Masala (Potato)
+3. Egg Bhurji
+4. Bread + Butter + Jam
+5. Tea / Coffee / Milk","1. Phulka + Dal Tadka
+2. Tomato Rice + Gobi 65
+3. White Rice + Chettinad Sambar + Udupi Tomato Rasam
+4. Paruppu Podi + Ghee + Thovaiyal + Papad
+5. Pineapple + Pickle + Buttermilk","Veg Puff
+Tea / Coffee / Milk","1. Chapati + Mix Veg Gravy + Dal
+2. White Rice + Rasam + Mix Veg Poriyal
+3. Idly + Podi + Oil + Mint Chutney + Sambar
+4. Salad (Carrot + Tomato + Lemon) + Milk + Gulab Jamun"
+"Tuesday","1. Paneer Paratha + Tomato Onion Gravy + Curd
+2. Millet Pongal + Vada + Sambar + Coconut Chutney
+3. Boiled Egg (Dispense in Hot Water)
 4. Wheat Bread + Butter + Jam
-5. Tea / Coffee / Milk","1. Chapathi + Panneer tikka Masala
-2 Ghee Rice
-3. White Rice +Dal + Paruppu Rasam +Carrot and beans poriyal+ butter milk
-4. Parupu podi + Ghee + Thovaiyal+papad
-5. Banana+Pickle+Butter milk","Veg samosa+sauce+mint chutny
-Tea /Coffee/Milk","1. Phulka + Chettinadu Egg Masala
-2.Dosai+Chutney+Sambar
+5. Tea / Coffee / Milk","1. Chapathi + Paneer Tikka Masala
+2. Ghee Rice
+3. White Rice + Dal + Paruppu Rasam + Carrot and Beans Poriyal + Buttermilk
+4. Paruppu Podi + Ghee + Thovaiyal + Papad
+5. Banana + Pickle + Buttermilk","Veg Sandwich
+Ginger Tea / Coffee / Milk","1. Phulka + Chettinadu Egg Masala
+2. Dosai + Chutney + Sambar
 3. Rice + Rasam + Curd
-Salad (onions+carrot)+ Milk + Ice Cream (VANILLA)"
-Wednesday,"1. Puri + White Chana Masala
-2. Millet Idly+ Vada + Sambar + Tomato pudhina chutny
-3. Egg Podimas
-4.bread + Butter + Jam
-5. Tea / Coffee / Milk","1. Ajwain Chapathi +Tandoori chicken + plain gravy
-2.Veg. Pulao
-3. White Rice +Mix.Veg Pappu+ Milagu Rasam + Gabbage Porial+Curd
-4.Parupu podi+ Ghee/Oil+Thovaiyal
-5.Fruit Salad+ Pappad + Pickle+Lemon Mint Juice","Boiled channa
-Ginger Tea /Coffee/Milk","1. Chapathi + peas Soya gravy
-2. Rice + Andhra Dhal + cabbage poriyal + Rasam + sambar
-3. Rava/semiya kitchadi+ Coconet Chutney
-4. Salad+ Milk +curd
-5. pineapple kesari"
-Thursday,"1.Alu paratha
-2.Podi Dosa+Sambar+ peanut onion chutny
+4. Salad (Onions + Carrot) + Milk + Ice Cream (Vanilla)"
+"Wednesday","1. Puri + White Chana Masala
+2. Millet Idly + Vada + Sambar + Tomato Pudina Chutney
+3. Egg Omelet
+4. Bread + Butter + Jam
+5. Tea / Coffee / Milk","1. Ajwain Chapathi + Tandoori Chicken + Plain Gravy
+2. Veg Pulao
+3. White Rice + Mix Veg Pappu + Milagu Rasam + Cabbage Poriyal
+4. Paruppu Podi + Ghee / Oil + Thovaiyal
+5. Fruit Salad + Papad + Pickle + Lemon Mint Juice","Boiled Channa
+Ginger Tea / Coffee / Milk","1. Chapathi + Peas Soya Gravy
+2. Rice + Andhra Dal + Cabbage Poriyal + Rasam + Sambar
+3. Rava / Semiya Kitchadi + Coconut Chutney
+4. Salad + Milk + Curd
+5. Pineapple Kesari"
+"Thursday","1. Aloo Paratha
+2. Podi Dosa + Sambar + Peanut Onion Chutney
 3. Egg Podimas
 4. Wheat Bread + Butter + Jam
-5. Tea / Coffee / Milk","1. Chapathi + Veg hariyali
-2. Bisibilabath + Potato Chips
-3. White Rice +More kuzhambu +Raw banana Poriyal +Dhal fry
-4. Parupu podi + Ghee + Thovaiyal
-5. Watermelon Fruit +Papad+Pickle+Butter Milk","Dal kachori/Sweet chutney
-Tea /Coffee/Milk","1. Chole Batura+White/Black channa masala
-2. Veg.Briyani + dahi onion raita
-3. White Rice + Rasam+Mix veg. Poriyl+sambar
-4. Salad(Onion+beetroot) + Milk"
-Friday,"1.Pav Bajji + chopped onion and lemon
-2. Iddly+Vada + Sambar + Chettinad Kara Chutney
-3. Egg bhurji
-4.Bread + Butter + Jam
-5. Tea / Coffee / Milk","1.Pulka+ Kadai chicken curry
-2.jeera Rice/Tomato Rice(Alternate Week) + Pappad
-3. White Rice + uduppi samabar +pudalangai poriyal + Moong Dal Rasam + Butter Milk
-4. Parupu podi + Ghee + Thovaiyal
-5. Muskmelon+Pickle","Sambar vada / Coconut chutny
-Tea /Coffee/Milk","1. Phulka + green peas gravy + French Fries
-2. White Rice + Raddish Sambar + Carrot Poriyal +Rasam
+5. Tea / Coffee / Milk","1. Chapathi + Veg Hariyali
+2. Jeera Rice + Potato Chips
+3. White Rice + More Kuzhambu + Raw Banana Poriyal + Dal Fry
+4. Paruppu Podi + Ghee + Thovaiyal
+5. Watermelon Fruit + Papad + Pickle + Buttermilk","Dal Kachori / Sweet Chutney
+Tea / Coffee / Milk","1. Chole Batura + White / Black Channa Masala
+2. Veg Briyani + Dahi Onion Raita
+3. White Rice + Rasam + Mix Veg Poriyal + Sambar
+4. Salad (Onion + Beetroot) + Milk"
+"Friday","1. Pav Bhaji + Chopped Onion and Lemon
+2. Idly + Vada + Sambar + Chettinad Kara Chutney
+3. Egg Bhurji
+4. Bread + Butter + Jam
+5. Tea / Coffee / Milk","1. Pulka + Kadai Chicken Curry
+2. Jeera Rice / Tomato Rice (Alternate Week) + Papad
+3. White Rice + Udupi Sambar + Pudalangai Poriyal + Moong Dal Rasam + Buttermilk
+4. Paruppu Podi + Ghee + Thovaiyal
+5. Muskmelon + Pickle","Sambar Vada / Coconut Chutney
+Tea / Coffee / Milk","1. Phulka + Lauki Channa Masala + French Fries
+2. White Rice + Radish Sambar + Carrot Poriyal + Rasam
 3. Ghee Rice
-4. STRAWBERRY MILKSHAKE+Onion+Carrot Salad"
-Saturday,"1. Aloo Paratha + tomato chutny 2 Pongal +Vada +Sambar
-3.Boiled Egg
+4. Strawberry Milkshake + Onion + Carrot Salad"
+"Saturday","1. Aloo Paratha + Tomato Chutney
+2. Pongal + Vada + Sambar
+3. Boiled Egg
 4. Wheat Bread + Butter + Jam
-5. Tea / Coffee / Milk","1.Pulka+Dhal Panjabi
-2. Fried rice + veg manchurian (semi gravy)
-3. White Rice + Karakulambu + Milagu rasam +Curd+ Keerai Porial
-4. Parupu podi + Ghee + Thovaiyal
-5.Pineapple+ Papad+Pickle+Lemon Juice","Veg puff
-Ginger/Coffee/Milk Tea","1.Pulka + Dal makhani
-2. Millet dosa + Sambar+Chutney
-3. White Rice + Rasam + Buttermilk + mix veg pooriyal
-4. Parupu podi + Ghee + Thovaiyal+ Rice kheer
-Milk+Salad(Tomato,Onion,Lemon, Carrot)"
-Sunday,"Semiya upma
+5. Tea / Coffee / Milk","1. Pulka + Dal Punjabi
+2. Fried Rice + Veg Manchurian (Semi Gravy)
+3. White Rice + Karakuzhambu + Milagu Rasam + Curd
+4. Paruppu Podi + Ghee + Thovaiyal
+5. Pineapple + Papad + Pickle + Lemon Juice","Veg Samosa + Sauce + Mint Chutney
+Tea / Coffee / Milk","1. Pulka + Dal Makhani + Gobi Chilli Dry
+2. Millet Dosa + Sambar + Chutney
+3. White Rice + Rasam + Buttermilk + Mix Veg Poriyal
+4. Paruppu Podi + Ghee + Thovaiyal + Rice Kheer
+5. Milk + Salad (Tomato, Onion, Lemon, Carrot)"
+"Sunday","1. Semiya Upma
 2. Masala Dosai + Sambar + Groundnut Chutney
-3.Egg Omelette
-4.Bread + Butter + Jam
-5. Tea / Coffee / Milk","1. Kalyana Chiken Briyani + Plain Chiken Gravey + Onion Raitha
-2.Pulka+Black Channa DAL
-3.PLAIN RICE, Mysore rasam
-4. Salad+ Lemon Juice","Papdi chat Ginger Tea /Coffee/Milk","1.Chapathi + mixed dal
-2.Methi Pulav
-2. White Rice+Sambar+ Rasam + ridge gourd with white channa Poriyal+ Curd rice with fruits
-4. Parupu podi + Ghee + Thovaiyal
-5.Fruit Salad (Green Grapes+Pappaya)+Papad+ Pickle+ Butter Milk"
+3. Egg Omelette
+4. Bread + Butter + Jam
+5. Tea / Coffee / Milk","1. Kalyana Chicken Biryani + Plain Chicken Gravy + Onion Raita
+2. Pulka + Black Channa Dal
+3. Plain Rice + Mysore Rasam
+4. Salad + Lemon Juice","Papdi Chat
+Ginger Tea / Coffee / Milk","1. Chapathi + Mixed Dal
+2. Methi Pulao
+3. White Rice + Sambar + Rasam + Ridge Gourd with White Channa Poriyal + Curd Rice with Fruits
+4. Paruppu Podi + Ghee + Thovaiyal
+5. Fruit Salad (Green Grapes + Papaya) + Papad + Pickle + Buttermilk"

@@ -37,13 +37,14 @@ from typing import Dict, List, Any, Optional
 
 # Import Gemini SDK lazily only when translation is required
 genai = None  # type: ignore
+gemini_client = None
 
-SRC_DIR = os.path.join("json", "en")
+SRC_DIR = os.path.join("json", "edge", "en")
 OUT_DIRS = {
-    "ta": os.path.join("json", "ta"),
-    "hi": os.path.join("json", "hi"),
+    "ta": os.path.join("json", "edge", "ta"),
+    "hi": os.path.join("json", "edge", "hi"),
 }
-MODEL_NAME = os.environ.get("GEMINI_MODEL", "gemini-flash-latest")
+MODEL_NAME = os.environ.get("GEMINI_MODEL", "gemini-3.1-flash-lite-preview")
 
 MENU_FIELDS = ["Day", "Breakfast", "Lunch", "Snacks", "Dinner"]
 # Only these fields should be translated; 'Day' must remain exactly as-is
@@ -171,12 +172,13 @@ def translate_fields(
                 0,
                 "STRICT: Use only the native script (no Latin letters) for words. Keep numbers and punctuation as-is.",
             )
-        response = model.generate_content(
-            content,
-            generation_config={
-                "response_mime_type": "application/json",
-                "temperature": 0.2,
-            },
+        response = gemini_client.models.generate_content(
+            model=MODEL_NAME,
+            contents=content,
+            config=genai.types.GenerateContentConfig(
+                response_mime_type="application/json",
+                temperature=0.2,
+            )
         )
         text = (response.text or "").strip()
         try:
@@ -257,12 +259,13 @@ def translate_menu_batch(
                 0,
                 "STRICT: Use only the native script (no Latin letters) for words. Keep numbers and punctuation as-is.",
             )
-        response = model.generate_content(
-            content,
-            generation_config={
-                "response_mime_type": "application/json",
-                "temperature": 0.2,
-            },
+        response = gemini_client.models.generate_content(
+            model=MODEL_NAME,
+            contents=content,
+            config=genai.types.GenerateContentConfig(
+                response_mime_type="application/json",
+                temperature=0.2,
+            )
         )
         text = (response.text or "").strip()
         try:
@@ -337,11 +340,10 @@ def translate_file(src_path: str, langs: List[str]) -> Dict[str, str]:
 
     results = {}
     for lang in langs:
-        model = genai.GenerativeModel(MODEL_NAME)  # type: ignore
         translated_data = dict(data)
         src_list: List[Dict[str, Any]] = list(data.get("list", []))
         # ONE REQUEST per menu file per language
-        translated_fields_list = translate_menu_batch(model, src_list, lang)
+        translated_fields_list = translate_menu_batch(gemini_client, src_list, lang)
         # Merge translated fields back into full records (preserve Day and other keys)
         merged_list: List[Dict[str, Any]] = []
         for rec, tfields in zip(src_list, translated_fields_list):
@@ -414,16 +416,18 @@ def main():
 
     # Translation required: initialize Gemini API lazily
     try:
-        import google.generativeai as _genai  # type: ignore
+        from google import genai as _genai  # type: ignore
         global genai
         genai = _genai
     except Exception as e:
-        raise SystemExit("google-generativeai is not installed. Run: pip install -r requirements.txt")
+        raise SystemExit("google-genai is not installed. Run: pip install -r requirements.txt")
 
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
         raise SystemExit("GEMINI_API_KEY is not set. Please export it before running.")
-    genai.configure(api_key=api_key)  # type: ignore
+    
+    global gemini_client
+    gemini_client = genai.Client(api_key=api_key)  # type: ignore
 
     # Determine which files to translate
     if selected:

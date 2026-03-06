@@ -1,0 +1,98 @@
+{
+  "list": [
+    {
+      "Id": 1,
+      "ncRecordId": "rec00913a9d3c634",
+      "ncRecordHash": "23c6b878da19c694f12ec4108a8937f9",
+      "Days": "Monday",
+      "Breakfast": "1. Onion Dosa + Sambar + Mint, Coriander & Curry Leaves Chutney\n2. Potato Poha + Onion\n3. Egg Masala Omelet\n4. Bread + Butter + Jam\n5. Tea / Coffee / Milk",
+      "Lunch": "1. Phulka + Dal Makhani + Gobi 65 Dry\n2. Tomato Rice + Papad\n3. White Rice + Chettinad Sambar + Udupi Tomato Rasam + Curd\n4. Paruppu Podi + Ghee + Thovaiyal + Papad\n5. Pineapple + Pickle",
+      "Snacks": "Pasta\nTea / Coffee / Milk",
+      "Dinner": "1. Phulka + Egg Korma\n2. Dosai + Chutney + Sambar\n3. Rice + Rasam + Curd\n4. Salad (Onions + Carrot + Beetroot) + Milk + Ice Cream (Vanilla)",
+      "CreatedAt": "2026-03-02 22:22:30+05:30",
+      "UpdatedAt": "2026-03-02 22:22:30+05:30"
+    },
+    {
+      "Id": 2,
+      "ncRecordId": "rece6577647c6944",
+      "ncRecordHash": "330dcbc48602fda4dfa7b963b29779e5",
+      "Days": "Tuesday",
+      "Breakfast": "1. Paneer Paratha + Tomato Onion Gravy + Curd\n2. Millet Pongal + Vada + Sambar + Coconut Chutney\n3. Boiled Egg (Dispense in Hot Water)\n4. Wheat Bread + Butter + Jam\n5. Tea / Coffee / Milk",
+      "Lunch": "1. Chapathi + Matar Paneer Masala\n2. Ghee Rice\n3. White Rice + More Kuzhambu + Dal Rasam + Carrot and Beans Poriyal + Buttermilk\n4. Paruppu Podi + Ghee + Thovaiyal + Papad\n5. Banana + Pickle + Buttermilk",
+      "Snacks": "Bread Pakoda (2 nos.) + Coconut Chutney\nTea / Coffee / Milk",
+      "Dinner": "1. Chapathi + Navratna Korma\n2. White Rice + Dal + Mix Veg Poriyal\n3. Idly + Podi + Oil + Coconut Chutney + Sambar + Curd\n4. Salad (Carrot + Tomato + Lemon) + Milk + Motichoor Laddu",
+      "CreatedAt": "2026-03-02 22:22:30+05:30",
+      "UpdatedAt": "2026-03-02 22:22:30+05:30"
+    },
+    {
+      "Id": 3,
+      "ncRecordId": "recd5cfefe1ce084",
+      "ncRecordHash": "e7de759b0be9eafad3ad232a915ffb0c",
+      "Days": "Wednesday",
+      "Breakfast": "1. Millet Upma\n2. Masala Dosai + Sambar + Groundnut Chutney\n3. Egg Omelette\n4. Bread + Butter + Jam\n5. Tea / Coffee / Milk",
+      "Lunch": "1. Ajwain Chapathi + Chicken Handi Masala\n2. Veg Pulao\n3. White Rice + Mix Veg Pappu + Milagu Rasam + Tendli Poriyal\n4. Paruppu Podi + Ghee / Oil + Thovaiyal\n5. Papad + Pickle + Lemon Juice",
+      "Snacks": "Boiled Masala\nGinger Tea / Coffee / Milk",
+      "Dinner": "1. Chapathi + Soya Keema with Green Peas Masala\n2. Rice + Andhra Dal + Vazhakkai Poriyal + Rasam + Sambar\n3. Rava / Semiya Kitchadi + Coconut Chutney\n4. Fruit Salad + Milk + Curd\n5. Paruppu Payasam",
+      "CreatedAt": "2026-03-02 22:22:30+05:30",
+      "UpdatedAt": "2026-03-02 22:22:30+05:30"
+    },
+    {
+      "Id": 4,
+      "ncRecordId": "rec64eefb0667524",
+      "ncRecordHash": "07dffd4c5ee3e9ff7a692afd3965fbe5",
+      "Days": "Thursday",
+      "Breakfast": "1. Masala Poha\n2. Podi Dosa + Sambar + Peanut Onion Chutney\n3. Egg Podimas\n4. Wheat Bread + Butter + Jam\n5. Tea / Coffee / Milk",
+      "Lunch": "1. Chapathi + Veg Kurma\n2. Bisi Bele Bath + Potato Chips\n3. White Rice + More Kuzhambu + Keerai Kootu + Dal Tadka\n4. Paruppu Podi + Ghee + Thovaiyal\n5. Watermelon Fruit + Pickle + Lassi",
+      "Snacks": "Pani Puri\nTea / Coffee / Milk",
+      "Dinner": "1. Chole Batura + White Channa Masala\n2. Veg Briyani + Dahi Onion Raita\n3. White Rice + Rasam + Poriyal + Sambar\n4. Salad (Onion + Beetroot) + Milk + Curd + Sugar",
+      "CreatedAt": "2026-03-02 22:22:30+05:30",
+      "UpdatedAt": "2026-03-02 22:22:30+05:30"
+    },
+    {
+      "Id": 5,
+      "ncRecordId": "rec90128523509d4",
+      "ncRecordHash": "459330d3d4c60725d1470c145f1d8f7d",
+      "Days": "Friday",
+      "Breakfast": "1. Aloo Paratha + Tomato Chutney\n2. Pongal + Masal Vada + Sambar\n3. Boiled Egg\n4. Wheat Bread + Butter + Jam\n5. Tea / Coffee / Milk",
+      "Lunch": "1. Plain Pulka + Chicken 65 + Chicken Gravy (Without Pieces)\n2. Jeera Rice + Papad\n3. White Rice + Udupi Sambar + Potato Pattani Masiyal + Moong Dal Rasam\n4. Paruppu Podi + Ghee + Thovaiyal\n5. Muskmelon + Pickle + Lime Juice",
+      "Snacks": "Keerai Vada\nTea / Coffee / Milk",
+      "Dinner": "1. Masala Kulcha + Corn Capsicum Gravy + French Fries\n2. White Rice + Dal + Radish Sambar + Rasam\n3. Lemon Rice + Rose Milkshake (Thick Consistency) + (Onion + Carrot + Beetroot) Salad",
+      "CreatedAt": "2026-03-02 22:22:30+05:30",
+      "UpdatedAt": "2026-03-02 22:22:30+05:30"
+    },
+    {
+      "Id": 6,
+      "ncRecordId": "rec93e88ab94a0d4",
+      "ncRecordHash": "b8de5172d9a7da81aa044274c6371848",
+      "Days": "Saturday",
+      "Breakfast": "1. Puri + Poori Masala (Aloo)\n2. Millet Idly + Vada + Sambar + Tomato Pudina Chutney\n3. Omelet\n4. Toasted Bread + Butter + Jam\n5. Tea / Coffee / Milk",
+      "Lunch": "1. Pulka + Dal Fry\n2. Arisi Paruppu Sadam + Masala Potato\n3. White Rice + Karakuzhambu + Milagu Rasam + Curd + Keerai Poriyal\n4. Paruppu Podi + Ghee + Thovaiyal\n5. Pineapple + Papad + Pickle + Lemon Juice",
+      "Snacks": "Samosa + Sauce\nGinger Tea / Coffee / Milk",
+      "Dinner": "1. Pulka + Cabbage Green Peas Masala Fry\n2. Millet Masala Dosa + Sambar + Chutney\n3. White Rice + Rasam + Buttermilk + Poriyal\n4. Paruppu Podi + Ghee + Thovaiyal + Semiya Payasam\n5. Milk + Salad (Tomato, Onion, Lemon, Carrot)",
+      "CreatedAt": "2026-03-02 22:22:30+05:30",
+      "UpdatedAt": "2026-03-02 22:22:30+05:30"
+    },
+    {
+      "Id": 7,
+      "ncRecordId": "rec8376ee4ade634",
+      "ncRecordHash": "10f23ddd2cb7078f30e9278d81685b6c",
+      "Days": "Sunday",
+      "Breakfast": "1. Pav Bhaji + Chopped Onion and Lemon\n2. Idly + Vada + Sambar + Chettinad Kara Chutney\n3. Egg Bhurji\n4. Bread + Butter + Jam\n5. Tea / Coffee / Milk",
+      "Lunch": "1. Hyderabadi Chicken Biryani + Plain Chicken Gravy + Onion Raita\n2. Pulka + Black Channa Dal\n3. Plain Rice + Mysore Rasam\n4. Fruit Salad (Green Grapes + Papaya) + Chilled Badam Milk\n5. Paruppu Podi + Ghee + Thovaiyal",
+      "Snacks": "Veg Cutlet\nTea / Coffee / Milk",
+      "Dinner": "1. Chapathi + Rajma Curry\n2. Methi Pulao\n3. White Rice + Sambar + Rasam + Poriyal + Curd Rice with Tadka\n4. Salad + Papad + Pickle + Milk",
+      "CreatedAt": "2026-03-02 22:22:30+05:30",
+      "UpdatedAt": "2026-03-02 22:22:30+05:30"
+    }
+  ],
+  "pageInfo": {
+    "totalRows": 7,
+    "page": 1,
+    "pageSize": 50,
+    "isFirstPage": true,
+    "isLastPage": true
+  },
+  "stats": {
+    "dbQueryTime": "1.234"
+  }
+}
