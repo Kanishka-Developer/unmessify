@@ -139,7 +139,7 @@
             "E-1-S": ["J Sathya PR Special","Mess announcements will be made here."],
             "E-1-V": ["J Sathya PR Veg","Mess announcements will be made here."]
           },
-          "timestamp": "09/01/2025 00:00:01"
+          "timestamp": "04/01/2026 00:00:00"
         }
       }
     },
@@ -147,7 +147,7 @@
       "orgs": ["vitc"]
     },
     "sys": {
-      "announcement_170": ["Unmessify News", "<b><u>Version 1.7.0 is here!</u></b><br><br>• Added E Block 🏡<br>• Updated Caterers 🧑‍🍳<br>• Better Android 15+ Support 📱<br>• Migrated to GitHub 🐙😸<br>• Removed Firebase 🔥<br>• Removed NocoDB 📚<br>• Initial i18n work 🌐<br>• More reliable AD loading 💸<br>• Made optimizations throughout the app 🚀<br>• Added new bugs to squash in future releases 🐛<br><br><b>Help Required: Unmessify is an unofficial mess app run by unpaid students. We need you to send us updated mess menus, laundry schedules, announcements, etc. Please WhatsApp us at +919038077102.</b>"],
+      "announcement_170": ["Unmessify News", "<b><u>Version 1.7.0 is here!</u></b><br><br>â€¢ Added E Block ðŸ¡<br>â€¢ Updated Caterers ðŸ§‘â€ðŸ³<br>â€¢ Better Android 15+ Support ðŸ“±<br>â€¢ Migrated to GitHub ðŸ™ðŸ˜¸<br>â€¢ Removed Firebase ðŸ”¥<br>â€¢ Removed NocoDB ðŸ“š<br>â€¢ Initial i18n work ðŸŒ<br>â€¢ More reliable AD loading ðŸ’¸<br>â€¢ Made optimizations throughout the app ðŸš€<br>â€¢ Added new bugs to squash in future releases ðŸ›<br><br><b>Help Required: Unmessify is an unofficial mess app run by unpaid students. We need you to send us updated mess menus, laundry schedules, announcements, etc. Please WhatsApp us at +919038077102.</b>"],
       "curAppVersion": 170,
       "minAppVersion": 170,
       "newVersionLink": "https://play.google.com/store/apps/details?id=tech.kaffeine.unmessify"
